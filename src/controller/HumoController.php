@@ -13,8 +13,14 @@ class HumoController extends Controller {
 
   public function index() {
     $items = $this->humoDAO->selectAll();
+
     $this->set('items', $items);
     $this->set('title', 'Humo shop');
+  }
+
+  public function details() {
+
+    $this->set('title', 'details');
   }
 
 }

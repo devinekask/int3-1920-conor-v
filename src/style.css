@@ -1,4 +1,11 @@
-body {
-  background-color: lightgreen;
-  font-family: sans-serif;
+/* General styles */
+@import './css/normalize.css';
+@import './css/vars.css';
+@import './css/typography.css';
+@import './css/header.css';
+@import './css/footer.css';
+@import './css/shopHome.css';
+
+.hidden {
+  display: none;
 }

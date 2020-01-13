@@ -1,0 +1,13 @@
+h1, .h1-like {
+  font-size: var(--fontBig);
+  font-family: var(--fontAlt);
+  font-weight: var(--fontWeightAlt);
+}
+
+h2, .h2-like {
+  font-size: var(--fontMedium);
+}
+
+li, a, p {
+  font-family: 'News Gothic Std', Arial, sans-serif;
+}

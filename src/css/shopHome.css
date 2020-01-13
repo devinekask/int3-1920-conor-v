@@ -1,0 +1,104 @@
+.promo {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: #f8f8f4;
+  margin-top: 3rem;
+}
+
+.promo__title {
+  background-color: #ee090c;
+  font-size: 20px;
+  font-family: var(--fontTitle);
+  color: white;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 1rem 0 .5rem;
+  text-align: center;
+}
+
+.promo__boek__title {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  width: 9rem;
+}
+
+.promo__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10rem;
+}
+
+.promo__info__price {
+  font-weight: var(--fontWeightAlt);
+}
+
+.promo__info__slogan {
+  font-size: 12px;
+}
+
+.promo__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 12rem;
+}
+
+.promo__carbutton {
+  display: flex;
+  align-items: center;
+  font-weight: var(--fontWeightAlt);
+  text-decoration: none;
+  padding: .4rem 1rem;
+  background-color: #ffe408;
+  color: black;
+}
+
+.promo__moreinfo {
+  text-decoration: none;
+  color: white;
+  font-weight: var(--fontWeightAlt);
+  padding: .5rem 1rem .3rem;
+  background-color: #ee090c;
+  text-transform: uppercase;
+}
+
+.promo__action {
+  background-image: url(../assets/Star.png);
+  background-repeat: no-repeat;
+  background-size: initial;
+  height: 10.4rem;
+  width: 10.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.promo__action__text {
+  text-align: center;
+  width: 5rem;
+  color: white;
+  font-family: var(--font);
+  font-size: 1rem;
+
+  & span {
+    color: #ffe408;
+    text-decoration: underline;
+  }
+}
+
+.promo__longread {
+  background-color: #ffe408;
+  font-size: 20px;
+  font-family: var(--fontTitle);
+  color: black;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 1rem 0 .5rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: var(--fontWeightAlt);
+}
