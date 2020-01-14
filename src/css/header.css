@@ -175,15 +175,16 @@
 
 .header__deel2_items {
   display: flex;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
+  align-items: center;
 }
 
 .header__deel2_item {
   list-style: none;
-  margin-right: 2.5rem;
+  margin-right: 1.5rem;
 }
 
 .header__deel2_item--link {
@@ -222,5 +223,24 @@
 
   .nav--pc {
     display: block;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+
+  .header__deel2_items {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .header__deel2_item {
+
+    margin-right: 2.5rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

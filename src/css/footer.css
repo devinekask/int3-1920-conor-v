@@ -160,7 +160,7 @@
 }
 
 .onderstedeel {
-  margin-right: 1.5rem;
+  margin-right: .5rem;
 }
 
 .link--mobiel {
@@ -190,5 +190,12 @@
 
   .footer--pc {
     display: block;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+
+  .onderstedeel {
+    margin-right: 1.5rem;
   }
 }
