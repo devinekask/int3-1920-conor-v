@@ -4,6 +4,7 @@
   align-items: center;
   background-color: #f8f8f4;
   margin-top: 3rem;
+  margin-bottom: 5rem;
 }
 
 .promo__title {
@@ -101,6 +102,7 @@
   text-align: center;
   text-decoration: none;
   font-weight: var(--fontWeightAlt);
+  margin-bottom: 2rem;
 }
 
 .product__container {

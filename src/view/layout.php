@@ -64,7 +64,7 @@
               <li class="header__deel2_item"><a class="header__deel2_item--link" href="#">humor</a></li>
               <li class="header__deel2_item nav__deel2__item"><a class="header__deel2_item--link" href="#">tv/film</a></li>
             </ul>
-            <img src="../assets/humologo.png" alt="humo logo">
+            <a href="index.php"><img src="../assets/humologo.png" alt="humo logo"></a>
             <ul class="header__deel2_items">
               <li class="header__deel2_item"><a class="header__deel2_item--link" href="#">muziek</a></li>
               <li class="header__deel2_item"><a class="header__deel2_item--link" href="#">boeken</a></li>

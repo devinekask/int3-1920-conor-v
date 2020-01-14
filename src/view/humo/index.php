@@ -18,7 +18,9 @@
 
 <section>
   <h2 class="hidden">filter producten</h2>
-
+  <form action="">
+    
+  </form>
 </section>
 
 <section class="product__container">
