@@ -122,9 +122,81 @@
   pc versie
 */
 
-.nav--pc {
-  background-color: teal;
-  height: 3rem;
+.header__deel1 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.header__deel1_items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.header__deel1_item {
+  list-style: none;
+  margin-right: 1rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.header__deel1_item--link {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.video--red {
+  background: red;
+  padding: .5rem 1rem;
+  color: white;
+  display: block;
+}
+
+.header__deel2__container {
+  background: #f8f8f4;
+}
+
+.header__deel2 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1040px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.header__deel2_items {
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.header__deel2_item {
+  list-style: none;
+  margin-right: 2.5rem;
+}
+
+.header__deel2_item--link {
+  text-decoration: none;
+  color: black;
+}
+
+.nav__deel2__item {
+  margin-right: 0;
+}
+
+.active--link {
+  color: #ee090c;
 }
 
 /*
@@ -149,6 +221,6 @@
   }
 
   .nav--pc {
-    display: flex;
+    display: block;
   }
 }

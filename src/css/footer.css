@@ -69,7 +69,9 @@
 
 .footer--pc__deel1 {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: 1040px;
+  margin: 0 auto;
   margin-bottom: 2rem;
 }
 
@@ -105,15 +107,14 @@
 .footer--pc__deel2 {
   background-color: black;
   height: 112px;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .deel2--article1 {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: .5rem 0 1rem;
 }
 
 .begeleid__list {
@@ -135,9 +136,9 @@
 
 .deel2--article2 {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   max-width: 1040px;
+  margin: 0 auto;
 }
 
 .footer__socialmedia {

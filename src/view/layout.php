@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/favicon.png" type="image/gif">
     <title><?php echo $title; ?></title>
     <?php echo $css;?>
   </head>
   <body>
+    <h1 class="hidden">humo shop</h1>
     <header>
       <nav class="nav--mobiel">
+        <h2 class="hidden">nav mobiel</h2>
           <div class="nav__deel1">
             <div class="menu--open">
               <label class="hamburger__menu" for="toggle">&#9776</label>
@@ -38,7 +41,39 @@
       </nav>
 
       <nav class="nav--pc">
+        <h2 class="hidden"> nav pc</h2>
+        <div class="header__deel1">
+          <ul class="header__deel1_items">
+            <li class="header__deel1_item"><a class="header__deel1_item--link video--red" href="#">video</a></li>
+            <li class="header__deel1_item"><a class="header__deel1_item--link" href="#">tv-gids</a></li>
+            <li class="header__deel1_item"><a class="header__deel1_item--link" href="#">zoekertjes</a></li>
+            <li class="header__deel1_item"><a class="header__deel1_item--link" href="#">abonnement nemen</a></li>
+          </ul>
+          <ul class="header__deel1_items">
+            <li class="header__deel1_item"><a class="header__deel1_item--link" href="#">nu in humo</a></li>
+            <li class="header__deel1_item"><a class="header__deel1_item--link" href="#">login</a></li>
+            <li class="header__deel1_item"><a class="header__deel1_item--link" href="#">registreer</a></li>
+          </ul>
+        </div>
 
+        <div class="header__deel2__container">
+          <div class="header__deel2">
+            <ul class="header__deel2_items">
+              <li class="header__deel2_item"><a class="header__deel2_item--link" href="#">home</a></li>
+              <li class="header__deel2_item"><a class="header__deel2_item--link" href="#">actua</a></li>
+              <li class="header__deel2_item"><a class="header__deel2_item--link" href="#">humor</a></li>
+              <li class="header__deel2_item nav__deel2__item"><a class="header__deel2_item--link" href="#">tv/film</a></li>
+            </ul>
+            <img src="../assets/humologo.png" alt="humo logo">
+            <ul class="header__deel2_items">
+              <li class="header__deel2_item"><a class="header__deel2_item--link" href="#">muziek</a></li>
+              <li class="header__deel2_item"><a class="header__deel2_item--link" href="#">boeken</a></li>
+              <li class="header__deel2_item"><a class="header__deel2_item--link active--link" href="index.php">shop</a></li>
+              <li class="header__deel2_item"><img src="../assets/cart.png" alt="car"></li>
+              <li class="header__deel2_item nav__deel2__item"><img src="../assets/scearch.png" alt="zoeken"></li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
     <main>
@@ -114,7 +149,7 @@
       <section class="footer--pc__deel2">
         <h2 class="hidden">footer deel2</h2>
         <article class="deel2--article1">
-          <h3 class="hidden"></h3>
+          <h3 class="hidden">links</h3>
           <ul class="begeleid__list">
             <li class="begeleid__list__item"><a class="begeleid__list__item--link" href="#">Privacybeleid</a></li>
             <li class="begeleid__list__item"><a class="begeleid__list__item--link" href="#">Wedstrijdregelement</a></li>
@@ -131,7 +166,7 @@
           </div>
         </article>
         <article  class="deel2--article2">
-          <h3 hidden="hidden"></h3>
+          <h3 hidden="hidden">sponsers</h3>
           <div class="footer__deel2__onderste">
             <img class="onderstedeel" src="../assets/dpglogo.png" alt="dpg logo">
             <p class="onderstedeel">&copy;2019 DPG Media</p>
