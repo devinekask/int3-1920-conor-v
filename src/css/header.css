@@ -1,4 +1,8 @@
-.nav {
+/*
+  mobiel versie
+*/
+
+.nav--mobiel {
   font-size: 32px;
   position: relative;
   border-bottom: .2rem solid black;
@@ -111,5 +115,40 @@
     left: 0;
     padding: 0;
     height: 100%;
+  }
+}
+
+/*
+  pc versie
+*/
+
+.nav--pc {
+  background-color: teal;
+  height: 3rem;
+}
+
+/*
+  media querys
+*/
+
+@media only screen and (max-width: 768px) {
+
+  .nav--mobiel {
+    display: flex;
+  }
+
+  .nav--pc {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+
+  .nav--mobiel {
+    display: none;
+  }
+
+  .nav--pc {
+    display: flex;
   }
 }

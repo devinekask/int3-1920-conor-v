@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <nav class="nav">
+      <nav class="nav--mobiel">
           <div class="nav__deel1">
             <div class="menu--open">
               <label class="hamburger__menu" for="toggle">&#9776</label>
@@ -26,8 +26,8 @@
                 <li class="menu__item"><a class="item__link" href="#">boeken</a></li>
                 <li class="menu__item"><a class="item__link" href="index.php">shop</a></li>
                 <li class="menu__item"><a class="item__link" href="#">humo sapiens</a></li>
-            </ul>
-          </div>
+              </ul>
+            </div>
             <img src="./assets/scearch.png" alt="vergroot glas">
           </div>
           <a class="logo nav__deel2" href="index.php">HUMO</a>
@@ -35,13 +35,16 @@
             <a class="car__link" href=""><img src="./assets/cart.png" alt="car">(<?php echo '0' ?>)</a>
             <img src="./assets/acount.png" alt="acount">
           </div>
+      </nav>
+
+      <nav class="nav--pc">
 
       </nav>
     </header>
     <main>
       <?php echo $content;?>
     </main>
-    <footer class="footer">
+    <footer class="footer--mobiel">
       <a class="fo__link" href="#">neem een abonnement</a>
       <ul class="fo__menu">
         <li class="fo__menu__item"><a class="fo__menu__item--link" href="#">naar de volledige website</a></li>
@@ -49,6 +52,96 @@
         <li class="fo__menu__item"><a class="fo__menu__item--link" href="#">contact</a></li>
         <li class="fo__menu__item"><a class="fo__menu__item--link" href="#">cookie instellingen</a></li>
       </ul>
+    </footer>
+
+    <footer class="footer--pc">
+      <section class="footer--pc__deel1">
+        <h2 class="hidden">footer deel1</h2>
+       <ul class="footer__list">
+         <li class="footer__list__item"><a class="footer__list__item--link cap--link" href="#">Actua</a></li>
+         <li class="footer__list__item"><a class="footer__list__item--link" href="#">nu in humo</a></li>
+         <li class="footer__list__item"><a class="footer__list__item--link" href="#">de columns</a></li>
+         <li class="footer__list__item"><a class="footer__list__item--link" href="#">dossiers</a></li>
+         <li class="footer__list__item"><a class="footer__list__item--link" href="#">politiek</a></li>
+         <li class="footer__list__item"><a class="footer__list__item--link" href="#">sport</a></li>
+         <li class="footer__list__item"><a class="footer__list__item--link" href="#">onze man/vrouw</a></li>
+         <li class="footer__list__item"><a class="footer__list__item--link" href="#">eerder in humo</a></li>
+         <li class="footer__list__item"><a class="footer__list__item--link" href="#">de eindejaarsvragen</a></li>
+        </ul>
+
+        <ul class="footer__list">
+          <li class="footer__list__item"><a class="footer__list__item--link cap--link" href="#">Humor</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">fotospecials</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">cartoons</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">uitlaat</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">(bulderlacht)</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">doe het zelf</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">humo's comedy cup</a></li>
+        </ul>
+
+        <ul class="footer__list">
+          <li class="footer__list__item"><a class="footer__list__item--link cap--link" href="#">Tv/Film</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">tv-gids</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">tv-tips</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">tv-reviews</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">filmreviews</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">de 100 beste films volgens (es)</a></li>
+        </ul>
+
+        <ul class="footer__list">
+          <li class="footer__list__item"><a class="footer__list__item--link cap--link" href="#">Muziek</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">concertreviews</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">cd-reviews</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">humo's rock rally</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">festivalitis</a></li>
+        </ul>
+
+        <ul class="footer__list">
+          <li class="footer__list__item"><a class="footer__list__item--link cap--link" href="#">Boeken</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">reviews</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">fictie</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">non-fictie</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">het lezen zoals het is</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">de grootste schrijvers van deze tijd</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link cap--link cap--link--middel" href="#">Ga naar</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">video</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">foto's</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">wedstrijden</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">zoekertjes</a></li>
+          <li class="footer__list__item"><a class="footer__list__item--link" href="#">apps</a></li>
+        </ul>
+      </section>
+      <section class="footer--pc__deel2">
+        <h2 class="hidden">footer deel2</h2>
+        <article class="deel2--article1">
+          <h3 class="hidden"></h3>
+          <ul class="begeleid__list">
+            <li class="begeleid__list__item"><a class="begeleid__list__item--link" href="#">Privacybeleid</a></li>
+            <li class="begeleid__list__item"><a class="begeleid__list__item--link" href="#">Wedstrijdregelement</a></li>
+            <li class="begeleid__list__item"><a class="begeleid__list__item--link" href="#">Adverteren</a></li>
+            <li class="begeleid__list__item"><a class="begeleid__list__item--link" href="#">Gebruikersvoorwaarden</a></li>
+            <li class="begeleid__list__item"><a class="begeleid__list__item--link" href="#">Cookiebegeleid</a></li>
+            <li class="begeleid__list__item"><a class="begeleid__list__item--link" href="#">Cookie instellingen</a></li>
+            <li class="begeleid__list__item"><a class="begeleid__list__item--link" href="#">Contact</a></li>
+            <li class="begeleid__list__item"><a class="begeleid__list__item--link" href="#">Colofon</a></li>
+          </ul>
+          <div class="footer__socialmedia">
+            <img class="footer_sm_facebook" src="../assets/facebooklogo.png" alt="facebook">
+            <img class="footer_sm_twitter" src="../assets/twitterlogo.png" alt="twitter">
+          </div>
+        </article>
+        <article  class="deel2--article2">
+          <h3 hidden="hidden"></h3>
+          <div class="footer__deel2__onderste">
+            <img class="onderstedeel" src="../assets/dpglogo.png" alt="dpg logo">
+            <p class="onderstedeel">&copy;2019 DPG Media</p>
+            <p class="onderstedeel link--mobiel">Naar de mobiele site</p>
+          </div>
+          <div>
+            <img src="../assets/sponsers.png" alt="sponsers">
+          </div>
+        </article>
+      </section>
     </footer>
     <?php echo $js; ?>
   </body>

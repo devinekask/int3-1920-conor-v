@@ -18,7 +18,7 @@
 
 <section>
   <h2 class="hidden">filter producten</h2>
-  
+
 </section>
 
 <section class="product__container">
@@ -30,7 +30,9 @@
       </div>
       <div class="product__detials">
         <h3 class="product__title"><?php echo $item['naam'] ?></h3>
-        <p class="product__price"><?php echo '&euro;' . $item['prijs'] ?></p>
+        <p class="product__price"><?php if($item['id'] == '3') {
+          echo '<span class="korting">&euro;12,99</span> met code &euro;4,99';
+        }else { echo '&euro;' . $item['prijs'];} ?></p>
         <div class="promo__buttons product__buttons">
           <a class="promo__carbutton" href="#"><img src="../assets/cart.png" alt="cart">+</a>
           <a class="promo__moreinfo" href="index.php?page=details&amp;id=<?php echo $item['id'] ?>">meer info</a>
