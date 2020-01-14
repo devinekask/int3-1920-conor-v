@@ -8,7 +8,7 @@
   </div>
   <div class="promo__buttons">
     <a class="promo__carbutton" href="#"><img src="../assets/cart.png" alt="cart">+</a>
-    <a class="promo__moreinfo" href="index.php?page=details&amp;id=3">meer info</a>
+    <a class="promo__moreinfo" href="index.php?page=details&amp;id=3&amp;cat=">meer info</a>
   </div>
   <div class="promo__action">
     <p class="promo__action__text">Met <span>humo code</span> is het nog maar &euro;4,99</p>
@@ -35,7 +35,7 @@
         }else { echo '&euro;' . $item['prijs'];} ?></p>
         <div class="promo__buttons product__buttons">
           <a class="promo__carbutton" href="#"><img src="../assets/cart.png" alt="cart">+</a>
-          <a class="promo__moreinfo" href="index.php?page=details&amp;id=<?php echo $item['id'] ?>">meer info</a>
+          <a class="promo__moreinfo" href="index.php?page=details&amp;id=<?php echo $item['id']?>&amp;cat=">meer info</a>
         </div>
       </div>
     </article>

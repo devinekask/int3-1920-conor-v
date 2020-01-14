@@ -1,0 +1,101 @@
+.invooraad {
+  color: green;
+  border: solid green .1rem;
+  padding: .4rem;
+  width: max-content;
+}
+
+.nietvoorraad {
+  color: red;
+  border: solid red .1rem;
+  padding: .4rem;
+  width: max-content;
+}
+
+.details {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.details__title {
+  background-color: #ee090c;
+  color: white;
+  font-family: 'Acumin Pro Condensed', Arial, Helvetica, sans-serif;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0 .5rem;
+}
+
+.details__img {
+  border: solid black .2rem;
+}
+
+.details__container {
+  display: flex;
+  flex-flow: column;
+  margin-top: 2rem;
+}
+
+.details__toggles {
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+.details__toggle {
+  text-decoration: none;
+  color: black;
+  padding: .5rem 1rem;
+  border: solid black .1rem;
+
+  &:hover {
+    background-color: #667efe;
+    border: #667efe solid .1rem;
+    color: white;
+  }
+}
+
+.details__toggle--active {
+  background-color: #667efe;
+  border: #667efe solid .1rem;
+  color: white;
+  font-weight: bold;
+}
+
+.details__price {
+  font-weight: bold;
+  text-align: center;
+}
+
+.details__categorie {
+  margin: 0;
+}
+
+.details__tekst {
+  width: 18rem;
+}
+
+.details__buttons {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.details__button--geel {
+  display: block;
+  background-color: #ffe408;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 1rem;
+  padding: .5rem;
+}
+
+.details__button--rood {
+  display: block;
+  background-color: #ee090c;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 1rem;
+  padding: .5rem;
+}
