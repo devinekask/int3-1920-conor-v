@@ -16,10 +16,28 @@
   <a class="promo__longread" href="#">beleef het boek van de week &rarr;</a>
 </section>
 
-<section>
+<section class="form__container">
   <h2 class="hidden">filter producten</h2>
-  <form action="">
-    
+  <form action="index.php" class="filter__form" method="get">
+    <input type="hidden" name="action" value="filter"/>
+
+    <label for="alles">
+      <input type="radio" id="alles" name="cat" value="alles" checked <?php if (isset($_GET['cat'])) {if ($_GET['cat'] == 'alles') {echo ' checked';}}?>>
+      <span class="form__toggle__button">Alles</span>
+    </label>
+
+    <!-- WAARDES UIT DB HALEN -->
+    <?php foreach($categories as $categorie): ?>
+      <label for="<?php echo $categorie['category'];?>">
+        <input type="radio" id="<?php echo $categorie['category'];?>" name="cat" value="<?php echo $categorie['category'];?>"
+          <?php if (isset($_GET['cat'])) {
+            if ($_GET['cat'] == $categorie['category']) {
+              echo ' checked';}}?>>
+        <span class="form__toggle__button"><?php echo $categorie['category'];?></span>
+      </label>
+    <?php endforeach;?>
+
+    <input type="submit" value="Filter" class="form__submit input input--button">
   </form>
 </section>
 

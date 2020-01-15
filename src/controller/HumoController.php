@@ -14,8 +14,16 @@ class HumoController extends Controller {
   public function index() {
     $items = $this->humoDAO->selectAll();
 
+    if (!empty($_GET['action']) && $_GET['action'] == 'filter') {
+      $items = $this->humoDAO->search($_GET['cat']);
+    }
+    if (!empty($_GET['action']) && $_GET['action'] == 'filter' && $_GET['cat'] == 'alles') {
+      $items = $this->humoDAO->selectAll();
+    }
+
     $this->set('items', $items);
     $this->set('title', 'Humo shop');
+    $this->set('categories', $categories = $this->humoDAO->selectAllCategories());
   }
 
   public function details() {

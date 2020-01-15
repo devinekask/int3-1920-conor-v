@@ -4,7 +4,7 @@
   align-items: center;
   background-color: #f8f8f4;
   margin-top: 3rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 .promo__title {
@@ -153,6 +153,29 @@
   text-decoration: line-through;
 }
 
+.form__container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  background-color: #f8f8f4;
+  font-size: 1.2rem;
+}
+
+.form__submit {
+  background-color: #667efe;
+  border-radius: 1rem;
+  border: #667efe .1rem solid;
+  padding: .5rem 1rem .3rem;
+  color: white;
+
+  &:hover {
+    background-color: white;
+    color: #667efe;
+    cursor: pointer;
+  }
+}
+
 @media only screen and (min-width: 700px) {
 
   .product__container {
@@ -172,5 +195,6 @@
   .product__container {
     width: 1040px;
     margin: 0 auto;
+    margin-bottom: 3rem;
   }
 }

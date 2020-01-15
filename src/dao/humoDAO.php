@@ -29,6 +29,21 @@ class HumoDAO extends DAO {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
+  public function search($category){
+    $sql = "SELECT * FROM `producten`
+    INNER JOIN `categories` ON `producten`.`category_id` = `categories`.`cat_id`
+    WHERE `categories`.`category` = :category";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':category',$category);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
 
+  public function selectAllCategories(){
+    $sql = "SELECT `category` FROM `categories`";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
 
 }
