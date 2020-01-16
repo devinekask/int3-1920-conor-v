@@ -1,11 +1,35 @@
+/*fonts*/
+@import url(https://use.typekit.net/bew4fbq.css);
+
 /* General styles */
 @import './css/normalize.css';
 @import './css/vars.css';
-@import './css/typography.css';
 @import './css/header.css';
 @import './css/footer.css';
 @import './css/shopHome.css';
 @import './css/details.css';
+
+* {
+  box-sizing: border-box;
+
+  &::before {
+    box-sizing: border-box;
+  }
+
+  &::after {
+    box-sizing: border-box;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: initial;
+  line-height: 1.2;
+}
 
 .hidden {
   display: none;

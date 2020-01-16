@@ -24,6 +24,12 @@ class HumoController extends Controller {
     $this->set('items', $items);
     $this->set('title', 'Humo shop');
     $this->set('categories', $categories = $this->humoDAO->selectAllCategories());
+
+    if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
+      header('Content-Type: application/json');
+      echo json_encode($items);
+      exit();
+    }
   }
 
   public function details() {

@@ -3,7 +3,7 @@
 */
 
 .footer--mobiel {
-  background-color: #f8f8f4;
+  background-color: var(--background);
   padding-top: 1rem;
 }
 
@@ -11,13 +11,12 @@
   display: block;
   text-align: center;
   margin: 0 1rem;
-  text-decoration: none;
   color: white;
-  background-color: #ee090c;
-  padding: .8rem 0 .5rem;
+  background-color: var(--button);
+  padding: 1rem 0;
   text-transform: uppercase;
-  font-family: 'News Gothic Std', Arial, sans-serif;
-  font-weight: var(--fontWeightAlt);
+  font-family: var(--tekstfont);
+  font-weight: var(--fontWeightBold);
 }
 
 .fo__menu {
@@ -30,8 +29,7 @@
 }
 
 .fo__menu__item {
-  font-size: .6rem;
-  list-style: none;
+  font-size: .8rem;
   border-left: dotted .1rem;
   padding-left: .4rem;
   text-transform: uppercase;
@@ -43,7 +41,6 @@
 }
 
 .fo__menu__item--link {
-  text-decoration: none;
   color: black;
 }
 
@@ -70,32 +67,26 @@
 .footer--pc__deel1 {
   display: flex;
   justify-content: space-between;
-  max-width: 1040px;
-  margin: 0 auto;
-  margin-bottom: 2rem;
+  max-width: 104rem;
+  margin: 2rem auto;
 }
 
 .footer__list {
-  width: 150px;
+  width: 15rem;
   border-left: dotted 1px black;
   padding-left: 1rem;
   line-height: 1.7;
 }
 
-.footer__list__item {
-  list-style: none;
-}
-
 .footer__list__item--link {
-  font-size: 12px;
-  text-decoration: none;
+  font-size: var(--footer);
   color: black;
   text-transform: uppercase;
 }
 
 .cap--link {
   text-transform: capitalize;
-  font-size: 15px;
+  font-size: var(--tekst);
   padding-bottom: 1rem;
   display: block;
 }
@@ -106,15 +97,15 @@
 
 .footer--pc__deel2 {
   background-color: black;
-  height: 112px;
+  height: 11.2rem;
 }
 
 .deel2--article1 {
   display: flex;
   justify-content: space-between;
-  max-width: 1040px;
+  max-width: 104rem;
   margin: 0 auto;
-  padding: .5rem 0 1rem;
+  padding: 1rem 0 2rem;
 }
 
 .begeleid__list {
@@ -125,13 +116,11 @@
 }
 
 .begeleid__list__item {
-  list-style: none;
   margin-right: 1.3rem;
 }
 
 .begeleid__list__item--link {
   color: white;
-  text-decoration: none;
 }
 
 .deel2--article2 {
@@ -144,6 +133,7 @@
 .footer__socialmedia {
   display: flex;
   align-items: center;
+  height: 4rem;
 }
 
 .footer_sm_facebook {

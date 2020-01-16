@@ -1,15 +1,19 @@
 .invooraad {
-  color: green;
-  border: solid green .1rem;
-  padding: .4rem;
-  width: max-content;
+  color: var(--invoorraad);
+  border: solid var(--invoorraad) .2rem;
 }
 
 .nietvoorraad {
-  color: red;
-  border: solid red .1rem;
+  color: var(--button);
+  border: solid var(--button) .2rem;
+}
+
+.invooraad, .nietvoorraad {
   padding: .4rem;
   width: max-content;
+  font-size: var(--tekst);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 .details {
@@ -25,12 +29,15 @@
 }
 
 .details__title, .extra__producten__title {
-  background-color: #ee090c;
+  background-color: var(--button);
   color: white;
-  font-family: 'Acumin Pro Condensed', Arial, Helvetica, sans-serif;
+  font-family: var(--titelfont);
   width: 100%;
   text-align: center;
-  padding: 1rem 0 .5rem;
+  padding: 1rem 0;
+  font-size: var(--grotetekst);
+  text-transform: uppercase;
+  margin: 2rem 0;
 }
 
 .details__img {
@@ -44,26 +51,28 @@
 }
 
 .details__toggles {
-  align-self: center;
-  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+  font-size: var(--tekst);
+  width: 25rem;
 }
 
 .details__toggle {
-  text-decoration: none;
   color: black;
   padding: .5rem 1rem;
+  font-family: var(--tekstfont);
   border: solid black .1rem;
 
   &:hover {
-    background-color: #667efe;
-    border: #667efe solid .1rem;
+    background-color: var(--blauw);
+    border: var(--blauw) solid .1rem;
     color: white;
   }
 }
 
 .details__toggle--active {
-  background-color: #667efe;
-  border: #667efe solid .1rem;
+  background-color: var(--blauw);
+  border: var(--blauw) solid .1rem;
   color: white;
   font-weight: bold;
 }
@@ -71,16 +80,18 @@
 .details__price {
   font-weight: bold;
   text-align: center;
-  font-size: 26px;
-  margin-top: 0;
+  font-size: var(--titel);
+  margin: 2rem 0;
 }
 
 .details__categorie {
-  margin: 0;
+  font-size: var(--grotetekst);
 }
 
 .details__tekst {
-  width: 18rem;
+  width: 25rem;
+  font-size: var(--tekst);
+  margin: 2rem 0
 }
 
 .details__buttons {
@@ -88,12 +99,12 @@
   flex-flow: column;
   align-items: center;
   margin-top: 1rem;
+  font-size: var(--grotetekst);
 }
 
 .details__button--geel {
   display: block;
-  background-color: #ffe408;
-  text-decoration: none;
+  background-color: var(--geel);
   color: black;
   margin-bottom: 1rem;
   padding: .5rem;
@@ -101,8 +112,7 @@
 
 .details__button--rood {
   display: block;
-  background-color: #ee090c;
-  text-decoration: none;
+  background-color: var(--button);
   color: white;
   margin-bottom: 1rem;
   padding: .5rem;
@@ -117,20 +127,12 @@
   .details__wrapper {
     flex-flow: row;
     width: 100%;
-    justify-content: space-around;
-  }
-
-  .details__price {
-    text-align: initial;
-    margin: 0;
-  }
-
-  .invooraad, .nietvoorraad {
-    margin: 0;
+    justify-content: space-between;
   }
 
   .details__buttons {
     flex-flow: row-reverse;
+    justify-content: flex-end;
   }
 
   .details__button--rood {
@@ -143,7 +145,7 @@
 
   .details {
     align-items: baseline;
-    width: 44rem;
+    width: 55rem;
     margin: 0 auto;
     margin-bottom: 3rem;
   }
@@ -154,7 +156,7 @@
 
   .details__title, .extra__producten__title {
     width: max-content;
-    padding: 1rem 1.5rem .5rem;
+    padding: 1rem 1.5rem;
   }
 
   .extra__producten__title {
@@ -162,6 +164,9 @@
     margin-bottom: 1rem;
   }
 
+  .details__price {
+    text-align: initial;
+  }
 }
 
 @media only screen and (min-width: 900px) {

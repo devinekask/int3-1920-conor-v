@@ -1,24 +1,23 @@
 :root {
-  --colorLightest: white;
-  --colorText: #211f1f;
-  --colorMain: #d69762;
-  --colorSecondary: #5ad485;
-  --colorLight: rgba(71, 55, 255, .08);
-  --colorGrayDark: #9c9c9c;
-  --spacerSmall: .75rem; /* 12px */
-  --spacerRegular: 1rem; /* 16px */
-  --spacerBig: 1.88rem; /* 30px */
-  --fontSmall: .85rem; /* 12px */
-  --fontRegular: 1.25rem; /* 18px */
-  --fontMedium: 1.75rem; /* 28px */
-  --fontBig: 2.5rem;
-  --font: 'News Gothic Std', arial, sans-serif;
-  --fontTitle: 'Acumin Pro Condensed', serif;
+  /*color*/
+  --button: #ee090c;
+  --geel: #ffe408;
+  --blauw: #667efe;
+  --background: #f8f8f4;
+  --invoorraad: #01982b;
+  /*fonts*/
+  --tekstfont: news-gothic-std, roboto;
+  --titelfont: acumin-pro-condensed, arial;
+  --extra: arial;
+  /*size*/
+  --footer: 1.3rem;
+  --tekst: 1.6rem;
+  --meerinfo: 1.8rem;
+  --grotetekst: 2rem;
+  --titel: 2.4rem;
+  --grotetitels: 3rem;
+  /*font weight*/
   --fontWeightRegular: 400;
-  --fontWeightBold: 500;
-  --fontWeightAlt: 700;
+  --fontWeightBold: 700;
+  --fontWeightBlack: 900;
 }
-
-@custom-media --only-small-screen (width >= 360px);
-@custom-media --only-regular-screen (width >= 660px);
-@custom-media --only-medium-screen (width >= 900px);
