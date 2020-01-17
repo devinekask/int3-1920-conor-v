@@ -5,11 +5,12 @@ import Product from './js/model/product.js';
   const $filterForm = document.querySelector(`.filter__form`);
   const $products = document.querySelector(`.product__container`);
   const $radiobuttons = document.querySelectorAll (`.radio`);
+  const $filterbutton = document.querySelector(`.form__submit`);
 
   const init = () => {
+    $filterbutton.style.display = `none`;
     $radiobuttons.forEach(radio => {
       radio.addEventListener ('click', e => {
-        radio.checked = `true`;
         handleClick(e);
       });
     });
@@ -32,10 +33,7 @@ import Product from './js/model/product.js';
     return product.createHTML();
   };
 
-  const handleSubmitFilterForm = e => {
-    console.log(e);
-    e.originalTarget.checked = true;
-    e.preventDefault();
+  const handleSubmitFilterForm = () => {
     const qs = new URLSearchParams([
       ...new FormData($filterForm).entries()
     ]).toString();
