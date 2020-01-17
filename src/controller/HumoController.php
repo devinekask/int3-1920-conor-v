@@ -51,4 +51,9 @@ class HumoController extends Controller {
     $this->set('title', 'details');
   }
 
+  public function car() {
+
+    $this->set('title', 'car');
+  }
+
 }

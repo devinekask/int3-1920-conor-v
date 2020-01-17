@@ -23,7 +23,7 @@
         <p class="promo__action__text">Met <span>humo code</span> is het nog maar &euro;4,99</p>
       </div>
     </div>
-    <a class="promo__longread" href="#">beleef het boek van de week &rarr;</a>
+    <a class="promo__longread" href="index.php?page=longread">beleef het boek van de week &rarr;</a>
   </article>
 </section>
 

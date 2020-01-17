@@ -19,6 +19,14 @@ $routes = array(
   'details' => array(
     'controller' => 'Humo',
     'action' => 'details'
+  ),
+  'car' => array(
+    'controller' => 'Humo',
+    'action' => 'car'
+  ),
+  'longread' => array(
+    'controller' => 'Longread',
+    'action' => 'longread'
   )
 );
 
