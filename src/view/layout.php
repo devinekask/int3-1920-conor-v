@@ -35,7 +35,7 @@
           </div>
           <a class="logo nav__deel2" href="index.php">HUMO</a>
           <div class="nav__deel3">
-            <a class="car__link" href=""><img src="./assets/cart.png" alt="car">(<?php echo '0' ?>)</a>
+            <a class="car__link" href=""><img src="./assets/cart.png" alt="car"><?php echo "(" . $numItems . ")" ?></a>
             <img src="./assets/acount.png" alt="acount">
           </div>
       </nav>
@@ -69,7 +69,7 @@
               <li class="header__deel2_item"><a class="header__deel2_item--link" href="#">muziek</a></li>
               <li class="header__deel2_item"><a class="header__deel2_item--link" href="#">boeken</a></li>
               <li class="header__deel2_item"><a class="header__deel2_item--link active--link" href="index.php">shop</a></li>
-              <li class="header__deel2_item"><img src="../assets/cart.png" alt="car"></li>
+              <li class="header__deel2_item"><img src="../assets/cart.png" alt="car"><?php echo "(" . $numItems . ")" ?></li>
               <li class="header__deel2_item nav__deel2__item"><img src="../assets/scearch.png" alt="zoeken"></li>
             </ul>
           </div>

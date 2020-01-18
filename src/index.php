@@ -21,7 +21,7 @@ $routes = array(
     'action' => 'details'
   ),
   'car' => array(
-    'controller' => 'Humo',
+    'controller' => 'Order',
     'action' => 'car'
   ),
   'longread' => array(
