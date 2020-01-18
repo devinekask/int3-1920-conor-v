@@ -8,7 +8,9 @@
 @import './css/footer.css';
 @import './css/shopHome.css';
 @import './css/details.css';
+@import './css/car.css';
 
+/* stylelint-disable */
 * {
   box-sizing: border-box;
 
@@ -24,6 +26,7 @@
     outline: none;
   }
 }
+/* stylelint-enable */
 
 html {
   font-size: 62.5%;

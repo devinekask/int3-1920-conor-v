@@ -12,6 +12,7 @@ class HumoController extends Controller {
   }
 
   public function index() {
+    $promo = $this->humoDAO->selectPromo();
     $items = $this->humoDAO->selectAll();
 
     if (!empty($_GET['action']) && $_GET['action'] == 'filter') {
@@ -22,6 +23,7 @@ class HumoController extends Controller {
     }
 
     $this->set('items', $items);
+    $this->set('promo', $promo);
     $this->set('title', 'Humo shop');
     $this->set('categories', $categories = $this->humoDAO->selectAllCategories());
 
@@ -33,13 +35,11 @@ class HumoController extends Controller {
   }
 
   public function details() {
-    //checkt of er een id is
     if (!empty($_GET['id'])) {
       $item = $this->humoDAO->selectById($_GET['id']);
       $rands = $this->humoDAO->selectRand();
     }
 
-    //geen geldig id dan reroute naar home
     if (empty($item)){
       $_SESSION['error'] = 'Dit product bestaat niet!!!';
       header('location: index.php?');

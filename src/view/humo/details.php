@@ -28,9 +28,12 @@
         echo '<p class="nietvoorraad">niet in voorraad</p>';
       } ?>
       <div class="details__buttons">
-          <a class="details__button--geel" href="#">+ in winkelmand doen</a>
-          <a class="details__button--rood" href="index.php">&#8592; verder shoppen</a>
-        </div>
+        <form method="post" action="index.php?page=car">
+          <input type="hidden" name="product_id" value="<?php echo $item['id'];?>" />
+          <button class="promo__carbutton" type="submit" name="action" value="add">+ in winkelmand doen</button>
+        </form>
+        <a class="details__button--rood" href="index.php">&#8592; verder shoppen</a>
+      </div>
     </article>
   </div>
 </section>

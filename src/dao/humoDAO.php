@@ -21,6 +21,15 @@ class HumoDAO extends DAO {
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
+  public function selectPromo(){
+    $sql = "SELECT * FROM `producten`
+    INNER JOIN `categories` ON `producten`.`category_id` = `categories`.`cat_id`
+    WHERE `id` = 3";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
   public function selectRand(){
     $sql = "SELECT * FROM `producten`
     ORDER BY RAND() LIMIT 3";
