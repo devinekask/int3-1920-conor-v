@@ -1,3 +1,39 @@
 .foto__car {
   display: none;
 }
+
+.carleeg__wrapper {
+  max-width: 104rem;
+  margin: 0 auto;
+}
+
+.carleeg__content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem 0;
+}
+
+.carleeg__tekst {
+  font-size: var(--meerinfo);
+}
+
+.carleeg__foto {
+  max-width: 5.5;
+}
+
+.carleeg__knop {
+  background-color: var(--button);
+  color: white;
+  padding: 1rem 1.5rem;
+  font-size: var(--meerinfo);
+  margin: 2rem 0;
+}
+
+@media only screen and (min-width: 550px) {
+
+  .carleeg__tekst {
+    font-size: var(--titel);
+  }
+}
