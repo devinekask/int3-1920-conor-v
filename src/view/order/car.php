@@ -13,6 +13,7 @@
     <?php }else {?>
     <form action="index.php?page=car" method="post">
       <?php
+        $verzend = 1.95;
         $total = 0;
         foreach($_SESSION['cart'] as $item):
           $itemTotal = $item['product']['prijs'] * $item['quantity'];
@@ -20,12 +21,19 @@
       ?>
       <img class="foto__car" src="<?php echo $item['product']['foto'] ?>" alt="">
       <p><?php echo $item['product']['naam'] ?></p>
-      <input type="number" name="" value="<?php echo $item['quantity'];?>">
+      <input type="number" name="quantity[<?php echo $item['product']['id'];?>]" value="<?php echo $item['quantity'];?>">
       <p><?php echo $item['product']['prijs'] ?></p>
       <button type="submit" class="" name="remove" value="<?php echo $item['product']['id'];?>">X</button>
-
-
       <?php endforeach; ?>
+
+      <p><button type="submit" id="update-cart" class="btn" name="action" value="update">Update Cart</button></p>
+
+      <div>
+        <p>Order totaal: <?php echo '&euro;' . $total?></p>
+        <p>Verzend kosten: &euro;1,95</p>
+        <p>Totaal: <?php echo '&euro;' . ($total + $verzend) ?></p>
+      </div>
+      
     </form>
   <?php };?>
 </section>
