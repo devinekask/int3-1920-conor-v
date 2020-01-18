@@ -1,0 +1,67 @@
+.betaalform__stappen {
+  display: flex;
+  margin: 2rem 0;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.betaalform__stappen--stap {
+  border: solid .1rem black;
+  padding: .5rem 1rem;
+  font-weight: var(--fontWeightBold);
+  font-size: 1.3rem;
+}
+
+.stap--active {
+  background-color: var(--blauw);
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: .7rem 1.5rem;
+}
+
+.betaalform__title {
+  text-align: center;
+  margin: 3rem 0;
+  font-size: var(--grotetitels);
+  font-family: var(--titelfont);
+}
+
+.betaalform__inputwrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.betaalform__input {
+  display: flex;
+  flex-flow: column;
+  padding-bottom: 2rem;
+  font-size: var(--grotetekst);
+
+}
+
+.betaalform__input--tekst {
+  width: 28rem;
+  height: 3rem;
+  border: .1rem solid black;
+}
+
+.betaalform__totaal {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.car__totaal__titel {
+  font-size: var(--grotetekst);
+  margin: 1rem 0;
+  font-family: var(--titelfont);
+}
+
+.car__totaal--email {
+  border-bottom: .2rem solid black;
+  padding-bottom: 1rem;
+}

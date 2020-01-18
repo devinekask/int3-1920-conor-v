@@ -59,22 +59,20 @@
 }
 
 .car__totaal {
-  width: 20rem;
+  width: 25rem;
   margin: 0 auto;
   background-color: var(--background);
   padding: 1rem 2rem;
   margin-bottom: 3rem;
 }
 
-.car__totaal--producten {
+.car__totaal--producten, .car__totaal--verzend, .car__totaal--fullname, .car__totaal--email {
   font-size: var(--tekst);
   font-family: var(--tekstfont);
 }
 
-.car__totaal--verzend {
-  font-size: var(--tekst);
-  font-family: var(--tekstfont);
-  margin: 2rem 0;
+.car__totaal--verzend, .car__totaal--fullname {
+  margin: 1rem 0;
 }
 
 .car__totaal--totaal {
@@ -113,7 +111,7 @@
 
 .carleeg__wrapper {
   max-width: 104rem;
-  margin: 0 auto;
+  margin: 4rem auto;
 }
 
 .carleeg__content {

@@ -71,4 +71,19 @@ class OrderController extends Controller {
       }
     }
   }
+
+  public function begin() {
+
+    $this->set('title', 'begin');
+  }
+
+  public function bestellen() {
+
+    $this->set('title', 'bestellen');
+  }
+
+  public function betalen() {
+
+    $this->set('title', 'betalen');
+  }
 }

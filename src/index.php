@@ -24,6 +24,18 @@ $routes = array(
     'controller' => 'Order',
     'action' => 'car'
   ),
+  'begin' => array(
+    'controller' => 'Order',
+    'action' => 'begin'
+  ),
+  'bestellen' => array(
+    'controller' => 'Order',
+    'action' => 'bestellen'
+  ),
+  'betalen' => array(
+    'controller' => 'Order',
+    'action' => 'betalen'
+  ),
   'longread' => array(
     'controller' => 'Longread',
     'action' => 'longread'
