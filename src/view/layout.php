@@ -69,7 +69,7 @@
               <li class="header__deel2_item"><a class="header__deel2_item--link" href="#">muziek</a></li>
               <li class="header__deel2_item"><a class="header__deel2_item--link" href="#">boeken</a></li>
               <li class="header__deel2_item"><a class="header__deel2_item--link active--link" href="index.php">shop</a></li>
-              <li class="header__deel2_item"><a href="index.php?page=car"><img src="../assets/cart.png" alt="car"><?php echo "(" . $numItems . ")" ?></a></li>
+              <li class="header__deel2_item"><a class="car__link" href="index.php?page=car"><img src="../assets/cart.png" alt="car">(<span class="car__rood"><?php echo $numItems ?></span>)</a></li>
               <li class="header__deel2_item nav__deel2__item"><img src="../assets/scearch.png" alt="zoeken"></li>
             </ul>
           </div>

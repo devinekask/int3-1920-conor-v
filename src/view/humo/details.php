@@ -52,7 +52,10 @@
             echo '<span class="korting">&euro;12,99</span> met code &euro;4,99';
           }else { echo '&euro;' . $rand['prijs'];} ?></p>
           <div class="promo__buttons product__buttons">
-            <a class="promo__carbutton" href="#"><img src="../assets/cart.png" alt="cart">+</a>
+            <form method="post" action="index.php?page=car">
+              <input type="hidden" name="product_id" value="<?php echo $rand['id'];?>" />
+              <button class="promo__carbutton" type="submit" name="action" value="add"><img src="../assets/cart.png" alt="cart">+</button>
+            </form>
           </div>
         </div>
       </article>

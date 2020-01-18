@@ -45,6 +45,10 @@
   color: black;
 }
 
+.car__rood {
+  color: var(--button);
+}
+
 .menu {
   padding: 0 2rem 0 1rem;
   display: none;

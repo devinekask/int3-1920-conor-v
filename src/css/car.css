@@ -1,5 +1,114 @@
-.foto__car {
+.car__item__wrapper {
+  border-top: solid .2rem black;
+  border-bottom: solid .2rem black;
+  padding: 2rem 0;
+  width: 90%;
+  margin: 0 auto;
+
+  &:first-child {
+    border-top: solid .4rem black;
+  }
+
+  &:last-child {
+    border-bottom: solid .4rem black;
+  }
+}
+
+.car__foto {
   display: none;
+}
+
+.car__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.car__title {
+  font-size: var(--grotetitels);
+  font-family: var(--tekstfont);
+  font-weight: var(--fontWeightRegular);
+  margin-bottom: 1rem;
+}
+
+.car__prijs {
+  font-size: var(--meerinfo);
+  font-family: var(--tekstfont);
+}
+
+.car__delete {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  font-size: var(--grotetekst);
+  font-family: var(--tekstfont);
+}
+
+.car__update {
+  margin: 2rem auto;
+  width: 12rem;
+}
+
+.car__update--link {
+  font-size: var(--meerinfo);
+  padding: .5rem 1rem;
+  border: none;
+  background-color: var(--blauw);
+  color: white;
+
+}
+
+.car__totaal {
+  width: 20rem;
+  margin: 0 auto;
+  background-color: var(--background);
+  padding: 1rem 2rem;
+  margin-bottom: 3rem;
+}
+
+.car__totaal--producten {
+  font-size: var(--tekst);
+  font-family: var(--tekstfont);
+}
+
+.car__totaal--verzend {
+  font-size: var(--tekst);
+  font-family: var(--tekstfont);
+  margin: 2rem 0;
+}
+
+.car__totaal--totaal {
+  font-size: var(--grotetekst);
+  font-family: var(--tekstfont);
+  font-weight: var(--fontWeightBlack);
+}
+
+.car__buttons {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-size: var(--grotetekst);
+}
+
+.car__betaalbutton {
+  font-weight: var(--fontWeightRegular);
+  padding: .6rem 2rem;
+  background-color: var(--geel);
+  color: black;
+  border: none;
+  font-size: var(--grotetekst);
+}
+
+.car__button--rood {
+  background-color: var(--button);
+  color: white;
+  padding: .6rem 2rem;
+  font-size: var(--grotetekst);
+  font-family: var(--tekstfont);
+  margin-bottom: 2rem;
 }
 
 .carleeg__wrapper {
@@ -35,5 +144,27 @@
 
   .carleeg__tekst {
     font-size: var(--titel);
+  }
+}
+
+@media only screen and (min-width: 800px) {
+
+  .car__foto {
+    display: initial;
+  }
+
+  .car__item__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .car__form {
+    display: flex;
+    justify-content: space-around;
   }
 }
