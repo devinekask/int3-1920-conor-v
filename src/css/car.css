@@ -55,7 +55,6 @@
   border: none;
   background-color: var(--blauw);
   color: white;
-
 }
 
 .car__totaal {
@@ -127,7 +126,7 @@
 }
 
 .carleeg__foto {
-  max-width: 5.5;
+  width: 35rem;
 }
 
 .carleeg__knop {
@@ -152,9 +151,10 @@
   }
 
   .car__item__wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 18rem 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
+    grid-gap: 2rem;
   }
 
 }

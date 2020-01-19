@@ -32,7 +32,7 @@
           <input type="hidden" name="product_id" value="<?php echo $item['id'];?>" />
           <button class="promo__carbutton" type="submit" name="action" value="add">+ in winkelmand doen</button>
         </form>
-        <a class="details__button--rood" href="index.php">&#8592; verder shoppen</a>
+        <a class="details__button--rood details__button--margin" href="index.php">&#8592; verder shoppen</a>
       </div>
     </article>
   </div>
@@ -51,7 +51,7 @@
           <p class="product__price"><?php if($rand['id'] == '3') {
             echo '<span class="korting">&euro;12,99</span> met code &euro;4,99';
           }else { echo '&euro;' . $rand['prijs'];} ?></p>
-          <div class="promo__buttons product__buttons">
+          <div class="promo__buttons product__buttons rand__carbutton">
             <form method="post" action="index.php?page=car">
               <input type="hidden" name="product_id" value="<?php echo $rand['id'];?>" />
               <button class="promo__carbutton" type="submit" name="action" value="add"><img src="../assets/cart.png" alt="cart">+</button>

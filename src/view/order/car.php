@@ -3,9 +3,8 @@
     <h2 class="details__title">HUMO/winkelmand</h2>
     <?php if (empty($_SESSION['cart'])){ ?>
     <div class="carleeg__content">
-      <img class="carleeg__foto" srcset="./assets/carplaceholder_G.png 600w,
-                  ./assets/carplaceholder_K.png 500w"
-       src="./assets/carplaceholder_K.png" alt="jos het debiele ei">
+
+      <img class="carleeg__foto" src="./assets/carplaceholder.png" alt="jos het debiele ei">
       <p class='carleeg__tekst'>Je winkelmandje is leeg!</p>
       <a class="carleeg__knop" href="index.php"> Verder shoppen</a>
     </div>
@@ -31,7 +30,7 @@
         </div>
         <?php endforeach; ?>
       </div>
-      
+
       <div>
         <p class="car__update"><button class="car__update--link" type="submit" id="update-cart" class="btn" name="action" value="update">Update Cart</button></p>
 

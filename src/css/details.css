@@ -91,7 +91,7 @@
 .details__tekst {
   width: 25rem;
   font-size: var(--tekst);
-  margin: 2rem 0
+  margin: 2rem 0;
 }
 
 .details__buttons {
@@ -118,6 +118,14 @@
   padding: .5rem;
 }
 
+.details__button--margin {
+  margin-top: 2rem;
+}
+
+.rand__carbutton {
+  justify-content: flex-start;
+}
+
 /*
   media querys
 */
@@ -125,18 +133,25 @@
 @media only screen and (min-width: 700px) {
 
   .details__wrapper {
-    flex-flow: row;
-    width: 100%;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+    max-width: 104rem;
   }
 
   .details__buttons {
     flex-flow: row-reverse;
     justify-content: flex-end;
+    align-items: flex-start;
   }
 
   .details__button--rood {
     margin-right: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .details__button--margin {
+    margin-top: 0;
   }
 
   .details__toggles {
@@ -172,6 +187,15 @@
 @media only screen and (min-width: 900px) {
 
   .details {
-    width: 55rem;
+    width: 104rem;
+    align-items: center;
+  }
+
+  .details__title {
+    align-self: baseline;
+  }
+
+  .details__button--rood {
+    font-size: 2rem;
   }
 }

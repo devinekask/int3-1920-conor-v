@@ -1,4 +1,4 @@
-<section>
+<section class="betaalform__container">
   <h2 class="hidden">form stap1</h2>
   <article>
     <h3 class="hidden">stappen form</h3>
@@ -12,7 +12,7 @@
 
   <article>
     <h3 class="betaalform__title">Algemene info</h3>
-    <form action="index.php" methode="post">
+    <form class="betaal__metode__form" action="index.php" methode="post">
       <div class="betaalform__inputwrapper">
         <label class="betaalform__input" for="voornaam">Voornaam:
           <input class="betaalform__input--tekst" type="text" name="voornaam" id="voornaam">
