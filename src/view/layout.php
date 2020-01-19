@@ -7,7 +7,10 @@
     <title><?php echo $title; ?></title>
     <?php echo $css;?>
   </head>
-  <body>
+    <?php if ($title == 'longread'){
+      echo $content;
+    } else { ?>
+    <body>
     <h1 class="hidden">humo shop</h1>
     <header>
       <nav class="nav--mobiel">
@@ -180,4 +183,5 @@
     </footer>
     <?php echo $js; ?>
   </body>
+  <?php } ?>
 </html>

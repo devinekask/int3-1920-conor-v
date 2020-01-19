@@ -1,0 +1,85 @@
+.LR__body {
+  background-color: var(--lrBackground);
+}
+
+.LR__tekst {
+  color: var(--lrWhite);
+  font-size: var(--lrSmall);
+  font-family: var(--lrTekst);
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.3;
+  width: 25.5rem;
+}
+
+.LR__title {
+  color: var(--lrWhite);
+  font-size: var(--lrMedium);
+  font-family: var(--lrTitle);
+  width: 25.5rem;
+}
+
+.LR__header__link {
+  font-size: var(--lrXSmall);
+  border: solid var(--lrWhite) .1rem;
+  padding: .7rem 1rem;
+}
+
+.LR__intro {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.LR__intro__tekst {
+  margin-bottom: 3rem;
+}
+
+.LR__intro__quote--wrapper {
+  width: 25rem;
+  padding: 2rem 0;
+  border-top: solid .3rem var(--lrWhite);
+  border-bottom: solid .3rem var(--lrWhite);
+
+}
+
+.LR__intro__quote {
+  display: block;
+  font-weight: medium;
+  width: 19rem;
+  text-align: center;
+  margin: 0 auto;
+  font-family: Spectral;
+}
+
+.LR__intro--deel1, .LR__intro--deel2, .LR__intro {
+  margin-top: 3rem;
+}
+
+.LR__footer {
+  background-color: var(--lrFooter);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.LR__footer__img--wrapper {
+  margin: 3rem 0;
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.LR__footer__sponser {
+  color: var(--lrWhite);
+  font-size: var(--lrSmall);
+  font-weight: bold;
+}
+
+.LR__footer__copy {
+  color: var(--lrWhite);
+  font-size: var(--lrXSmall);
+  font-family: var(--lrTitle);
+  margin: 2rem 0 3rem;
+  font-weight: bold;
+}

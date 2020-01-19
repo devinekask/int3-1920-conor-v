@@ -20,4 +20,19 @@
   --fontWeightRegular: 400;
   --fontWeightBold: 700;
   --fontWeightBlack: 900;
+
+  /*longread vars*/
+  --lrTekst: itc-american-typewriter, serif;
+  --lrTitle: bitter, sans-serif;
+  /*color*/
+  --lrWhite: white;
+  --lrVuur: #f15a24;
+  --lrBackground: #001826;
+  --lrFooter: #000b18;
+  /*size*/
+  --lrXSmall: 2rem;
+  --lrSmall: 2.4rem;
+  --lrMedium: 3rem;
+  --lrLarge: 3.6rem;
+  --lrXLarge: 5rem;
 }
