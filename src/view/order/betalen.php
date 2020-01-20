@@ -12,7 +12,7 @@
 
   <article>
     <h3 class="betaalform__title">Betaal methode</h3>
-    <form class="betaal__metode__form" action="index.php" methode="post">
+    <form class="betaal__metode__form" action="index.php" method="post">
       <div class="betaalform__inputwrapper betaalform__inputwrapper--toggle">
         <label class="betaalform__toggle" for="paypal">
           <input class="radio" type="radio" id="paypal" name="betaal" value="paypal" checked>

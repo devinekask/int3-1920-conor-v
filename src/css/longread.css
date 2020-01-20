@@ -2,6 +2,15 @@
   background-color: var(--lrBackground);
 }
 
+.LR__header {
+  background-image: url(../assets/longread/header/header__320.png);
+  height: 57rem;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
 .LR__tekst {
   color: var(--lrWhite);
   font-size: var(--lrSmall);
@@ -9,30 +18,40 @@
   font-weight: 500;
   font-style: normal;
   line-height: 1.3;
-  width: 25.5rem;
+  padding: 0 3rem;
+  margin-bottom: 3rem;
 }
 
 .LR__title {
   color: var(--lrWhite);
   font-size: var(--lrMedium);
   font-family: var(--lrTitle);
-  width: 25.5rem;
+  padding: 0 3rem;
+  line-height: 1.3;
 }
 
 .LR__header__link {
   font-size: var(--lrXSmall);
   border: solid var(--lrWhite) .1rem;
   padding: .7rem 1rem;
+  display: block;
+  height: 4rem;
+  width: 14rem;
+
+  &:hover {
+    background-color: var(--lrWhite);
+    color: var(--lrBackground);
+  }
 }
 
-.LR__intro {
+.LR__intro,
+.LR__chapter1,
+.LR__chapter2__deel1,
+.LR__chapter3,
+.LR__waarom {
   display: flex;
   flex-flow: column;
   align-items: center;
-}
-
-.LR__intro__tekst {
-  margin-bottom: 3rem;
 }
 
 .LR__intro__quote--wrapper {
@@ -40,20 +59,90 @@
   padding: 2rem 0;
   border-top: solid .3rem var(--lrWhite);
   border-bottom: solid .3rem var(--lrWhite);
-
 }
 
 .LR__intro__quote {
   display: block;
   font-weight: medium;
-  width: 19rem;
+  padding: 0 3rem;
   text-align: center;
   margin: 0 auto;
-  font-family: Spectral;
+  font-family: serif;
+}
+
+.LR__intro--deel2,
+.LR__waarom__kooptitle--wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 .LR__intro--deel1, .LR__intro--deel2, .LR__intro {
   margin-top: 3rem;
+}
+
+.LR__chap1__title {
+  margin: 2rem 0 3rem;
+}
+
+.LR__chapter2__deel1 {
+  background: linear-gradient(180deg, #df6338 50%, rgba(241, 90, 36, 0) 100%);
+}
+
+.LR__chapter2__titel {
+  margin: 2rem 0 3rem;
+}
+
+.LR__chapter2__illustratie {
+  display: flex;
+  flex-flow: column;
+}
+
+.LR__chap3__foto {
+  margin-bottom: 2rem;
+}
+
+.LR__chap3__title,
+.LR__waarom__title {
+  margin-bottom: 3rem;
+}
+
+.LR__waarom__kooptitle {
+  color: var(--lrWhite);
+  font-size: var(--lrMedium);
+  text-align: center;
+  width: 25.5rem;
+  margin: 4rem 0 1rem;
+  font-family: var(--lrTitle);
+  line-height: 1.3;
+}
+
+.LR__waarom__kooptitle--link {
+  color: var(--lrWhite);
+  font-size: var(--lrMedium);
+  font-family: var(--lrTitle);
+  font-weight: 200;
+  border: solid .5rem;
+  padding: 1rem;
+  margin-bottom: 8rem;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: var(--lrWhite);
+    color: var(--lrBackground);
+  }
+}
+
+.LR__waarom__humo {
+  text-align: center;
+}
+
+.LR__waarom__deel2 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 .LR__footer {

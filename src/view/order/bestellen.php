@@ -12,7 +12,7 @@
 
   <article>
     <h3 class="betaalform__title">Levering adres</h3>
-    <form class="betaal__metode__form" action="index.php" methode="post">
+    <form class="betaal__metode__form" action="index.php" method="post">
       <div class="betaalform__inputwrapper">
         <label class="betaalform__input" for="straat">Straat:
           <input class="betaalform__input--tekst" type="text" name="straat" id="straat">
