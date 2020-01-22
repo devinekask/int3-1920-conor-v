@@ -18,6 +18,11 @@ class OrderController extends Controller {
         header('Location: index.php');
         exit();
       }
+      if ($_POST['action'] == 'add_detail') {
+        $this->_handleAdd();
+        header('Location: index.php?page=details&id='. $_POST['id'] .'&details_id='. $_POST['details_id']);
+        exit();
+      }
       if ($_POST['action'] == 'empty') {
         $_SESSION['cart'] = array();
       }
@@ -36,17 +41,17 @@ class OrderController extends Controller {
   }
 
   private function _handleAdd() {
-    if (empty($_SESSION['cart'][$_POST['product_id']])) {
-      $product = $this->humoDAO->selectById($_POST['product_id']);
+    if (empty($_SESSION['cart'][$_POST['details_id']])) {
+      $product = $this->humoDAO->selectById($_POST['details_id']);
       if (empty($product)) {
         return;
       }
-      $_SESSION['cart'][$_POST['product_id']] = array(
+      $_SESSION['cart'][$_POST['details_id']] = array(
         'product' => $product,
         'quantity' => 0
       );
     }
-    $_SESSION['cart'][$_POST['product_id']]['quantity']++;
+    $_SESSION['cart'][$_POST['details_id']]['quantity']++;
   }
 
   private function _handleRemove() {

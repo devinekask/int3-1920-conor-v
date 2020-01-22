@@ -36,7 +36,8 @@ class HumoController extends Controller {
 
   public function details() {
     if (!empty($_GET['id'])) {
-      $item = $this->humoDAO->selectById($_GET['id']);
+      $item = $this->humoDAO->selectById($_GET['details_id']);
+      $options = $this->humoDAO->selectByOptions($_GET['id']);
       $rands = $this->humoDAO->selectRand();
     }
 
@@ -46,6 +47,7 @@ class HumoController extends Controller {
       exit();
     }
 
+    $this->set('options', $options);
     $this->set('rands', $rands);
     $this->set('item', $item);
     $this->set('title', 'details');

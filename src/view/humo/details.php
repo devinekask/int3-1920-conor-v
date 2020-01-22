@@ -4,33 +4,30 @@
     <img class="details__img" src="<?php echo $item['foto']?>" alt="<?php echo $item['naam']?>">
     <article class="details__container">
       <h3 class="hidden">product data</h3>
-        <?php if ($item['category'] == 'boeken' &&  $item['id'] != '1'):?>
-          <div class="details__toggles">
-            <a class="details__toggle <?php if ($_GET['cat'] == "e-book"){echo 'details__toggle--active';}?>"
-              href="index.php?page=details&amp;id=<?php echo $item['id']?>&amp;cat=e-book">E-book</a>
-            <a class="details__toggle <?php if ($_GET['cat'] == "" || $_GET['cat'] == "papier"){ echo 'details__toggle--active';}?>"
-            href="index.php?page=details&amp;id=<?php echo $item['id']?>&amp;cat=papier">Papiere versie</a>
-          </div>
-        <?php endif;?>
-      <p class="details__price"><?php if ($item['id'] == '3' && ($_GET['cat'] == '' || $_GET['cat'] == 'papier')){
+      <div class="details__toggles">
+        <?php foreach($options as $option): ?>
+          <a href="index.php?page=details&id=<?php echo $option['product_id']?>&details_id=<?php echo $option['details_id']?>"
+          class="details__toggle <?php if ($option['details_id'] == $item['details_id']) echo 'details__toggle--active'; ?>">
+          <?php echo $option['optie']?></a>
+        <?php endforeach; ?>
+      </div>
+      <p class="details__price"><?php if ($item['product_id'] == '3' && ($_GET['details_id'] == '2')){
         echo '<span class="korting">&euro;12,99</span> met code &euro;4,99';
-      }
-      elseif ($_GET['cat'] == 'e-book'){
-        echo '&euro;' . $item['prijsEbook'];
       }else {
         echo '&euro;' . $item['prijs'];
       }?></p>
       <p class="details__categorie">Categorie: <?php echo $item['category']  ?></p>
       <p class="details__tekst"><?php echo $item['beschrijving'] ?></p>
-      <?php if ($item['voorraad'] == true){
-        echo '<p class="invooraad">in voorraad</p>';
+      <?php if ($item['voorraad'] == 'invoorraad' || $item['voorraad'] == 'direct verkrijgbaar'){
+        echo '<p class="invooraad">' . $item['voorraad'] . '</p>';
       } else {
-        echo '<p class="nietvoorraad">niet in voorraad</p>';
+        echo '<p class="nietvoorraad">' . $item['voorraad'] . '</p>';
       } ?>
       <div class="details__buttons">
         <form method="post" action="index.php?page=car">
-          <input type="hidden" name="product_id" value="<?php echo $item['id'];?>" />
-          <button class="promo__carbutton" type="submit" name="action" value="add">+ in winkelmand doen</button>
+          <input type="hidden" name="details_id" value="<?php echo $item['details_id'];?>" />
+          <input type="hidden" name="id" value="<?php echo $item['product_id'];?>" />
+          <button class="promo__carbutton" type="submit" name="action" value="add_detail">+ in winkelmand doen</button>
         </form>
         <a class="details__button--rood details__button--margin" href="index.php">&#8592; verder shoppen</a>
       </div>

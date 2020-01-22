@@ -14,10 +14,10 @@
       </div>
       <div class="promo__buttons">
         <form method="post" action="index.php?page=car">
-          <input type="hidden" name="product_id" value="<?php echo $promo['id'];?>" />
+          <input type="hidden" name="details_id" value="<?php echo $promo['details_id'];?>" />
           <button class="promo__carbutton" type="submit" name="action" value="add"><img src="../assets/cart.png" alt="cart">+</button>
         </form>
-        <a class="promo__moreinfo" href="index.php?page=details&amp;id=3&amp;cat=">meer info</a>
+        <a class="promo__moreinfo" href="index.php?page=details&amp;id=<?php echo $promo['product_id']?>&amp;details_id=<?php echo $promo['details_id'] ?>">meer info</a>
       </div>
       <div class="promo__action">
         <p class="promo__action__text">Met <span>humo code</span> is het nog maar &euro;4,99</p>
@@ -60,15 +60,15 @@
       </div>
       <div class="product__detials">
         <h3 class="product__title"><?php echo $item['naam'] ?></h3>
-        <p class="product__price"><?php if($item['id'] == '3') {
+        <p class="product__price"><?php if($item['product_id'] == '3') {
           echo '<span class="korting">&euro;12,99</span> met code &euro;4,99';
         }else { echo '&euro;' . $item['prijs'];} ?></p>
         <div class="promo__buttons product__buttons">
           <form method="post" action="index.php?page=car">
-            <input type="hidden" name="product_id" value="<?php echo $item['id'];?>" />
+            <input type="hidden" name="details_id" value="<?php echo $item['details_id'];?>" />
             <button class="promo__carbutton" type="submit" name="action" value="add"><img src="../assets/cart.png" alt="cart">+</button>
           </form>
-          <a class="promo__moreinfo" href="index.php?page=details&amp;id=<?php echo $item['id']?>&amp;cat=">meer info</a>
+          <a class="promo__moreinfo" href="index.php?page=details&amp;id=<?php echo $item['product_id']?>&amp;details_id=<?php echo $item['details_id'] ?>">meer info</a>
         </div>
       </div>
     </article>
