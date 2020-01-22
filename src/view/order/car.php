@@ -20,7 +20,7 @@
             $total += $itemTotal;
         ?>
         <div class="car__item__wrapper">
-          <img class="car__foto" src="<?php echo $item['product']['foto'] ?>" alt="">
+          <img class="car__foto" src="<?php echo $item['product']['foto'] ?>" alt="<?php echo $item['product']['naam'] ?>">
           <h3 class="car__title"><?php echo $item['product']['naam'] ?></h3>
           <div class="car__info">
             <input type="number" name="quantity[<?php echo $item['product']['details_id'];?>]" value="<?php echo $item['quantity'];?>">
@@ -43,8 +43,8 @@
         <div class="car__buttons">
         <a class="car__button--rood" href="index.php">&#8592; verder shoppen</a>
           <form method="post" action="index.php?page=car">
-            <input type="hidden" name="betalen" value="betalen" />
-            <button class="car__betaalbutton" type="submit" name="action" value="add">betalen&rarr;</button>
+            <input type="hidden" name="betalen" value="<?php echo $total ?>"/>
+            <button class="car__betaalbutton" type="submit" name="action" value="form">betalen&rarr;</button>
           </form>
         </div>
       </div>

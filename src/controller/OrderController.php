@@ -2,13 +2,16 @@
 
 require_once __DIR__ . '/Controller.php';
 require_once __DIR__ . '/../dao/humoDAO.php';
+require_once __DIR__ . '/../dao/orderDAO.php';
 
 class OrderController extends Controller {
 
   private $humoDAO;
+  private $orderDAO;
 
   function __construct() {
     $this->humoDAO = new HumoDAO();
+    $this->orderDAO = new OrderDAO();
   }
 
   public function car() {
@@ -25,6 +28,13 @@ class OrderController extends Controller {
         header('Location: index.php?page=details&id='. $_POST['id'] .'&details_id='. $_POST['details_id']);
         exit();
       }
+
+      if ($_POST['action'] == 'form') {
+        $this->_handleform();
+        header('Location: index.php?page=begin');
+        exit();
+      }
+
       if ($_POST['action'] == 'empty') {
         $_SESSION['cart'] = array();
       }
@@ -40,6 +50,7 @@ class OrderController extends Controller {
       header('Location: index.php?page=car');
       exit();
     }
+
     $this->set('title', 'winkelmand');
   }
 
@@ -80,6 +91,19 @@ class OrderController extends Controller {
     }
   }
 
+  /* TOTAAL TOEVOEGEN AAN SESSIE
+  private function _handleform() {
+    if (isset($_SESSION['cart'])) {
+      $total = $_POST['betalen'];
+      if (empty($total)) {
+        return;
+      }
+      $_SESSION['cart'][] = $total;
+    }
+    $_SESSION['cart'];
+  }
+  */
+
   public function begin() {
 
     $this->set('title', 'begin');
@@ -93,5 +117,22 @@ class OrderController extends Controller {
   public function betalen() {
 
     $this->set('title', 'betalen');
+  }
+
+  public function bevestiging() {
+    $desired_length = 10;
+    $unique = uniqid();
+    $trackingcode = substr($unique, 0, $desired_length);
+
+    if (!empty($_POST['action'])) {
+      if ($_POST['action'] == 'bevestiging') {
+        session_destroy();
+        header('Location: index.php');
+        exit();
+      }
+    }
+
+    $this->set('trackingcode', $trackingcode);
+    $this->set('title', 'bevestiging');
   }
 }

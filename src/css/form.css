@@ -81,6 +81,78 @@
   margin-bottom: 2rem;
 }
 
+.bevestig__danku--wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.bevestig__danku {
+  font-size: 2.5rem;
+  font-family: var(--tekstfont);
+  text-align: center;
+  width: 30rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.bevestig__traking {
+  font-size: 1.5rem;
+  font-family: var(--tekstfont);
+  text-align: center;
+
+  & span {
+    color: blue;
+    text-decoration: underline;
+    font-size: 1.8rem;
+  }
+}
+
+.bevestig__items {
+  margin: 4rem 0;
+  text-align: center;
+
+  &:last-child {
+    border-top: none;
+  }
+}
+
+.bevestig__item {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-around;
+  border-top: dotted black .2rem;
+  border-bottom: dotted black .2rem;
+  font-size: var(--titel);
+  align-items: center;
+
+  &:last-child {
+    border-top: none;
+  }
+}
+
+.bevestig__foto {
+  display: none;
+}
+
+.bevestig__totaal {
+  font-size: var(--titel);
+  font-weight: var(--fontWeightBold);
+  font-family: var(--tekstfont);
+  margin-top: 4rem;
+}
+
+.bevestig__form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.bevestig__knop {
+  background-color: var(--button);
+  color: white;
+}
+
 @media only screen and (min-width: 800px) {
 
   .betaal__metode__form {
@@ -95,5 +167,13 @@
   .betaalform__inputwrapper--toggle {
     align-items: flex-start;
     margin-left: 5rem;
+  }
+
+  .bevestig__foto {
+    display: block;
+  }
+
+  .bevestig__danku {
+    width: 41rem;
   }
 }

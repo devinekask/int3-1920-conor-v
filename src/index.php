@@ -36,6 +36,10 @@ $routes = array(
     'controller' => 'Order',
     'action' => 'betalen'
   ),
+  'bevestiging' => array(
+    'controller' => 'Order',
+    'action' => 'bevestiging'
+  ),
   'longread' => array(
     'controller' => 'Longread',
     'action' => 'longread'
