@@ -24,7 +24,7 @@
           <h3 class="car__title"><?php echo $item['product']['naam'] ?></h3>
           <div class="car__info">
             <input type="number" name="quantity[<?php echo $item['product']['details_id'];?>]" value="<?php echo $item['quantity'];?>">
-            <p class="car__prijs"><?php echo $item['product']['prijs'] ?></p>
+            <p class="car__prijs"><?php echo '&euro;' . $item['product']['prijs'] ?></p>
             <button type="submit" class="car__delete" name="remove" value="<?php echo $item['product']['details_id'];?>">X</button>
           </div>
         </div>
