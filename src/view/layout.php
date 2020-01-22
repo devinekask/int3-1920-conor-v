@@ -12,6 +12,12 @@
     } else { ?>
     <body>
     <h1 class="hidden">humo shop</h1>
+    <?php if (!empty($_SESSION['error'])): ?>
+      <p class="session__error"><?php echo $_SESSION['error'] ?></p>
+    <?php endif; ?>
+    <?php if (!empty($_SESSION['info'])): ?>
+      <p class="session__info"><?php echo $_SESSION['info'] ?></p>
+    <?php endif; ?>
     <header>
       <nav class="nav--mobiel">
         <h2 class="hidden">nav mobiel</h2>

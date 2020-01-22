@@ -50,7 +50,7 @@
           }else { echo '&euro;' . $rand['prijs'];} ?></p>
           <div class="promo__buttons product__buttons rand__carbutton">
             <form method="post" action="index.php?page=car">
-              <input type="hidden" name="product_id" value="<?php echo $rand['id'];?>" />
+              <input type="hidden" name="details_id" value="<?php echo $rand['details_id'];?>" />
               <button class="promo__carbutton" type="submit" name="action" value="add"><img src="../assets/cart.png" alt="cart">+</button>
             </form>
           </div>

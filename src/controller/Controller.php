@@ -10,6 +10,9 @@ class Controller {
     if (basename(dirname(dirname(__FILE__))) != 'src') {
       $this->env = 'production';
     }
+    if(!isset($_SESSION['cart'])) {
+      $_SESSION['cart'] = array();
+    }
     call_user_func(array($this, $this->route['action']));
   }
 

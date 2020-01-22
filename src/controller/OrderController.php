@@ -15,11 +15,13 @@ class OrderController extends Controller {
     if (!empty($_POST['action'])) {
       if ($_POST['action'] == 'add') {
         $this->_handleAdd();
+        $_SESSION['info'] = 'Product is toegevoegt aan winkelmand';
         header('Location: index.php');
         exit();
       }
       if ($_POST['action'] == 'add_detail') {
         $this->_handleAdd();
+        $_SESSION['info'] = 'Product is toegevoegt aan winkelmand';
         header('Location: index.php?page=details&id='. $_POST['id'] .'&details_id='. $_POST['details_id']);
         exit();
       }
@@ -34,6 +36,7 @@ class OrderController extends Controller {
     }
     if (!empty($_POST['remove'])) {
       $this->_handleRemove();
+      $_SESSION['info'] = 'Product is verwijdert';
       header('Location: index.php?page=car');
       exit();
     }

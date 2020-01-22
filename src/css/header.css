@@ -2,6 +2,26 @@
   mobiel versie
 */
 
+.session__error,
+.session__info {
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 4s linear;
+}
+
+.session__error {
+  background-color: lightsalmon;
+}
+
+.session__info {
+  background-color: lightgreen;
+}
+
 .nav--mobiel {
   font-size: 32px;
   position: relative;
