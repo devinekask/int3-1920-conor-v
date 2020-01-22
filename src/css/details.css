@@ -126,6 +126,10 @@
   justify-content: flex-start;
 }
 
+.details__carbutton {
+  padding: .8rem 1rem;
+}
+
 /*
   media querys
 */

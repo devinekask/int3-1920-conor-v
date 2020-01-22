@@ -27,7 +27,7 @@
         <form method="post" action="index.php?page=car">
           <input type="hidden" name="details_id" value="<?php echo $item['details_id'];?>" />
           <input type="hidden" name="id" value="<?php echo $item['product_id'];?>" />
-          <button class="promo__carbutton" type="submit" name="action" value="add_detail">+ in winkelmand doen</button>
+          <button class="promo__carbutton details__carbutton" type="submit" name="action" value="add_detail">+ in winkelmand doen</button>
         </form>
         <a class="details__button--rood details__button--margin" href="index.php">&#8592; verder shoppen</a>
       </div>

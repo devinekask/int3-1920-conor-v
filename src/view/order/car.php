@@ -44,7 +44,7 @@
         <a class="car__button--rood" href="index.php">&#8592; verder shoppen</a>
           <form method="post" action="index.php?page=car">
             <input type="hidden" name="betalen" value="<?php echo $total ?>"/>
-            <button class="car__betaalbutton" type="submit" name="action" value="form">betalen&rarr;</button>
+            <button class="car__betaalbutton" type="submit" name="action" value="begin">betalen&rarr;</button>
           </form>
         </div>
       </div>

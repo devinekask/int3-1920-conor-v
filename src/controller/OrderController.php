@@ -41,6 +41,27 @@ class OrderController extends Controller {
       if ($_POST['action'] == 'update') {
         $this->_handleUpdate();
       }
+
+      if ($_POST['action'] == 'begin') {
+        $data = array(
+          'naam' => '',
+          'email' => '',
+          'straat' => '',
+          'gemeente' => '',
+          'postcode' => 0,
+          'methode' => '',
+          'trackingcode' => '',
+          'totaal' => $_POST['betalen']
+        );
+
+        $insertbegin = $this->orderDAO->insertBegin($data);
+      }
+
+      if (!empty($insertbegin)){
+        header("Location: index.php?page=begin");
+        exit();
+      }
+
       header('Location: index.php?page=car');
       exit();
     }
@@ -105,33 +126,116 @@ class OrderController extends Controller {
   */
 
   public function begin() {
+    $info = $this->orderDAO->selectLastId();
 
+    if (!empty($_POST['action'])){
+      if ($_POST['action'] == 'adresinfo') {
+        $naam = $_POST['voornaam'] . ' ' . $_POST['achternaam'];
+        $email = $_POST['email'];
+        $updateInfo = $this->orderDAO->updateAlgemeen($naam, $email);
+      }
+
+      if (!empty($updateInfo)){
+        header("Location: index.php?page=bestellen");
+        exit();
+      }
+    }
+
+    $this->set('verzendkosten', 1.95);
+    $this->set('info', $info);
     $this->set('title', 'begin');
   }
 
   public function bestellen() {
+    $info = $this->orderDAO->selectLastId();
 
+    if (!empty($_POST['action'])){
+      if ($_POST['action'] == 'betalen') {
+        if (empty($_POST['facstraat'])) {
+          $_POST['facstraat'] = $_POST['straat'];
+        }
+        if (empty($_POST['facnummer'])) {
+          $_POST['facnummer'] = $_POST['nummer'];
+        }
+        if (empty($_POST['facgemeente'])) {
+          $_POST['facgemeente'] = $_POST['gemeente'];
+        }
+        if (empty($_POST['facpostcode'])) {
+          $_POST['facpostcode'] = $_POST['postcode'];
+        }
+        $data = array(
+          'straat' => $_POST['straat'] . ' ' . $_POST['nummer'],
+          'gemeente' => $_POST['gemeente'],
+          'postcode' => $_POST['postcode'],
+          'facstraat' => $_POST['facstraat'] . ' ' . $_POST['facnummer'],
+          'facgemeente' => $_POST['facgemeente'],
+          'facpostcode' => $_POST['facpostcode']
+        );
+
+        $insertadres = $this->orderDAO->updateAdres($data);
+      }
+
+      if (!empty($insertadres)){
+        header("Location: index.php?page=betalen");
+        exit();
+      }
+    }
+
+    $this->set('verzendkosten', 1.95);
+    $this->set('info', $info);
     $this->set('title', 'bestellen');
   }
 
   public function betalen() {
+    $info = $this->orderDAO->selectLastId();
 
+    if (!empty($_POST['action'])){
+      if ($_POST['action'] == 'bevestiging') {
+        $methode = $_POST['methode'];
+        $insertmethode = $this->orderDAO->updateMethode($methode);
+      }
+
+      if (!empty($insertmethode)){
+        header("Location: index.php?page=bevestiging");
+        exit();
+      }
+    }
+
+    $this->set('verzendkosten', 1.95);
+    $this->set('info', $info);
     $this->set('title', 'betalen');
   }
 
   public function bevestiging() {
+    $info = $this->orderDAO->selectLastId();
+
     $desired_length = 10;
     $unique = uniqid();
     $trackingcode = substr($unique, 0, $desired_length);
 
     if (!empty($_POST['action'])) {
       if ($_POST['action'] == 'bevestiging') {
+
+        $inserttrackingcode = $this->orderDAO->updateCode($trackingcode);
+
+        foreach($_SESSION['cart'] as $item) {
+          $titel = $item['product']['naam'];
+          $hoeveelheid = $item['quantity'];
+          $type = $item['product']['optie'];
+          $prod_id = $item['product']['product_id'];
+          $order_id = $info['aankoop_id'];
+
+          $inserproductitems = $this->orderDAO->insertitems($titel, $hoeveelheid, $type, $prod_id, $order_id);
+        }
+
         session_destroy();
+        $_SESSION['info'] = 'Product is toegevoegt aan winkelmand';
         header('Location: index.php');
         exit();
       }
     }
 
+    $this->set('info', $info);
     $this->set('trackingcode', $trackingcode);
     $this->set('title', 'bevestiging');
   }

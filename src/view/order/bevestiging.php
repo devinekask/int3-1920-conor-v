@@ -24,7 +24,7 @@
           <p><?php echo $item['quantity']?>x</p>
         </div>
       <?php endforeach ?>
-      <p class="bevestig__totaal">totaal: &euro;</p>
+      <p class="bevestig__totaal">totaal: &euro;<?php echo $info['totaal'] ?></p>
     </div>
 
     <form class="bevestig__form" method="post" action="index.php?page=bevestiging">
