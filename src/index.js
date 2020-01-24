@@ -1,5 +1,10 @@
 require('./style.css');
 
+if (window.location.search === '?page=longread') {
+  require('./js/model/longread.js');
+}
+
+
 import Product from './js/model/product.js';
 {
   const $filterForm = document.querySelector(`.filter__form`);
