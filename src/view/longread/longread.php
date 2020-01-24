@@ -225,6 +225,7 @@
     <p class="LR__footer__sponser">sponsert by: HUMO</p>
     <p class="LR__footer__copy">HUMO &copy; 2020</p>
   </footer>
+  <script src="./js/model/longread.js"></script>
   <?php echo $js; ?>
 </body>
 
