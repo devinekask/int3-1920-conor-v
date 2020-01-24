@@ -65,11 +65,11 @@
     <article class="LR__chapter1__deel2">
       <div class="LR__weetje1 hidden">
         <p class="LR__weetje1-X">X</p>
-        <div>
-          <img src="./assets/longread/weetje1.png" alt="illustratie">
-          <div>
-            <h4>Wat is het gevaar?</h4>
-            <p>
+        <div class="LR__weetje__container">
+          <img class="LR__weetje__foto" src="./assets/longread/weetje1.png" alt="illustratie">
+          <div class="LR__weetje__tekst-wrapper">
+            <h4 class="LR__weetje__title">Wat is het gevaar?</h4>
+            <p class="LR__weetje__tekst">
               Dit boek heb ik geschreven met een waarschuwing in het achterhoofd.
               Ray Bradbury wou lezers waarschuwen voor de technologie. In deze tijd ging het vooral over de televisie.
               Hij wou dat mensen niet blindelings reclames en televisie programma’s doen geloven en zelf laten nadenken over dingen die ze zien.
@@ -106,11 +106,11 @@
     <h2 class="hidden">chapter2</h2>
     <div class="LR__weetje2 hidden">
       <p class="LR__weetje2-X">X</p>
-      <div>
-        <img src="./assets/longread/weetje2.png" alt="illustratie">
-        <div>
-          <h4>Wat is het gevaar?</h4>
-          <p>
+      <div class="LR__weetje__container">
+        <img class="LR__weetje__foto" src="./assets/longread/weetje2.png" alt="illustratie">
+        <div class="LR__weetje__tekst-wrapper">
+          <h4 class="LR__weetje__title">Wat is het gevaar?</h4>
+          <p class="LR__weetje__tekst">
             Toen Ray Bradbury 15 jaar was, was wereldoorlog twee volop bezig.
             Hij zag nazi’s boeken en papier van joodse mensen verbranden
             op straat zodat hun geschiedenis zou vergaan.

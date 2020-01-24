@@ -229,7 +229,7 @@ class OrderController extends Controller {
         }
 
         session_destroy();
-        $_SESSION['info'] = 'Product is toegevoegt aan winkelmand';
+        $_SESSION['info'] = 'Danku voor u aankoop';
         header('Location: index.php');
         exit();
       }
