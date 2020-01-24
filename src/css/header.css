@@ -9,9 +9,6 @@
   padding: 1rem;
   margin-bottom: 1rem;
   font-size: 2rem;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s 2s, opacity 4s linear;
 }
 
 .session__error {

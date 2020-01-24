@@ -2,13 +2,41 @@
   background-color: var(--lrBackground);
 }
 
-.LR__header {
-  background-image: url(../assets/longread/header/header__320.png);
-  height: 57rem;
-  background-repeat: no-repeat;
+.LR__hotspot {
+  background-color: white;
+  width: 6rem;
+  height: 6rem;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3rem;
+  font-size: 4rem;
+  font-weight: bold;
+  flex-flow: column;
+  cursor: pointer;
+
+  &:hover {
+    transition: 1s;
+    transform: rotate(180deg);
+  }
+}
+
+.LR__rotate {
+
+  &:hover {
+    transform: rotate(180deg);
+  }
+
+}
+
+.LR__chap1__hotspot {
+  position: absolute;
+  left: 10rem;
+}
+
+.LR__chap2__hotspot {
+  position: absolute;
+  left: 10rem;
 }
 
 .LR__tekst {
@@ -34,14 +62,16 @@
   font-size: var(--lrXSmall);
   border: solid var(--lrWhite) .1rem;
   padding: .7rem 1rem;
-  display: block;
-  height: 4rem;
-  width: 14rem;
+  margin-right: 1rem;
 
   &:hover {
     background-color: var(--lrWhite);
     color: var(--lrBackground);
   }
+}
+
+.LR__intro {
+  align-items: center;
 }
 
 .LR__intro,
@@ -51,7 +81,6 @@
 .LR__waarom {
   display: flex;
   flex-flow: column;
-  align-items: center;
 }
 
 .LR__intro__quote--wrapper {
@@ -81,12 +110,18 @@
   margin-top: 3rem;
 }
 
+.LR__intro--deel1 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
 .LR__chap1__title {
   margin: 2rem 0 3rem;
 }
 
 .LR__chapter2__deel1 {
-  background: linear-gradient(180deg, #df6338 50%, rgba(241, 90, 36, 0) 100%);
+  background: linear-gradient(180deg, #f05a26 50%, rgba(241, 90, 36, 0) 100%);
 }
 
 .LR__chapter2__titel {
@@ -171,4 +206,190 @@
   font-family: var(--lrTitle);
   margin: 2rem 0 3rem;
   font-weight: bold;
+}
+
+.LR__weetje1,
+.LR__weetje2 {
+  background: white;
+  height: 100vh;
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+}
+
+@media only screen and (min-width: 650px) {
+
+  .LR__intro--deel2 {
+    flex-flow: row;
+    margin: 4rem 0;
+  }
+
+  .LR__intro__quote--wrapper {
+    width: 25rem;
+  }
+
+  .intro__tekst__wrapper {
+    width: 37rem;
+  }
+
+  .LR__intro__tekst2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .LR__intro--deel1 {
+    width: 53rem;
+    margin-bottom: 2rem;
+  }
+
+  .LR__chapter1__deel1,
+  .LR__chapter2__tekstdeel1,
+  .LR__chapter3__tekstdeel1 {
+    width: 60rem;
+  }
+
+  .LR__chapter1__deel3,
+  .LR__chapter2__tekstdeel2,
+  .LR__chapter3__tekstdeel2 {
+    width: 60rem;
+    align-self: end;
+  }
+
+  .LR__tekst__space {
+    margin-bottom: 0;
+  }
+
+  .LR__chapter2--wrapper {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .LR__waarom__kooptitle--wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .LR__waarom__kooptitle {
+    width: 32rem;
+  }
+
+  .LR__waarom__kooptitle__tekst {
+    width: 59rem;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+
+  .LR__intro--deel1 {
+    flex-flow: row-reverse;
+    justify-content: center;
+    width: 80rem;
+    margin-bottom: 8rem;
+
+    & .LR__intro__tekst {
+      margin-bottom: 0;
+      width: 49rem;
+    }
+  }
+
+  .LR__chapter1 {
+    align-items: center;
+  }
+
+  .LR__chapter1__wrapper {
+    display: grid;
+    max-width: 104rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10rem 1fr 1fr;
+    margin: 0 auto;
+  }
+
+  .LR__chapter1__deel1 {
+    grid-area: 2/1;
+    width: 34rem;
+  }
+
+  .LR__chapter1__deel3 {
+    grid-area: 3/2;
+    width: 34rem;
+  }
+
+  .LR__chapter2--wrapper {
+    flex-flow: row;
+    margin: 0 auto;
+  }
+
+  .LR__chapter2__titel {
+    text-align: center;
+  }
+
+  .LR__chapter2__tekstdeel2 {
+    align-self: start;
+    height: 55rem;
+    width: 40rem;
+  }
+
+  .LR__chapter2__tekstdeel1 {
+    width: 40rem;
+  }
+
+  .LR__chapter3--wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10rem 1fr 1fr;
+    margin: 0 auto;
+  }
+
+  .LR__chapter3__tekstdeel1 {
+    grid-area: 2/1;
+    width: 34rem;
+  }
+
+  .LR__chapter3__tekstdeel2 {
+    grid-area: 3/2;
+    width: 34rem;
+    align-self: flex-start;
+  }
+
+  .LR__waarom__deel1 {
+    width: 60rem;
+    margin-left: 12rem;
+    margin-bottom: 3rem;
+  }
+
+  .LR__waarom__kooptitle {
+    width: 60rem;
+  }
+
+  .LR__waarom__title {
+    text-align: center;
+    margin-top: 6rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .LR__chapter1__deel1,
+  .LR__chapter1__deel3,
+  .LR__chapter3__tekstdeel1,
+  .LR__chapter3__tekstdeel2 {
+    width: 50rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+
+  .LR__chapter1__deel1,
+  .LR__chapter1__deel3,
+  .LR__chapter2__tekstdeel1,
+  .LR__chapter2__tekstdeel2,
+  .LR__chapter3__tekstdeel1,
+  .LR__chapter3__tekstdeel2 {
+    width: 60rem;
+  }
+
+  .LR__waarom__deel1 {
+    margin-left: 25rem;
+  }
 }

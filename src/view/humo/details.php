@@ -1,7 +1,12 @@
 <section class="details">
   <h2 class="details__title"><?php echo $item['naam'] ?></h2>
   <div class="details__wrapper">
-    <img class="details__img" src="<?php echo $item['foto']?>" alt="<?php echo $item['naam']?>">
+    <img class="details__img" src="<?php
+    if ($item['product_id'] == 3){
+      echo $item['foto_groot'];
+    }else{
+      echo $item['foto'];
+    } ?>" alt="<?php echo $item['naam']?>">
     <article class="details__container">
       <h3 class="hidden">product data</h3>
       <div class="details__toggles">
