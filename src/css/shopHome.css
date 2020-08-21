@@ -72,6 +72,7 @@
   background-color: var(--geel);
   color: black;
   border: none;
+  cursor: pointer;
 }
 
 .promo__moreinfo {

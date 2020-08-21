@@ -40,6 +40,14 @@
           <p class="car__totaal--totaal">Totaal: <?php echo '&euro;' . ($total + $verzend) ?></p>
         </div>
 
+        <div>
+          <form method="post" action="index.php?page=car">
+            <input type="hidden" name="betalen" value="<?php echo $total ?>"/>
+            <input type="text" name="" id="">
+            <button type="submit" name="action" value="begin">submit code</button>
+          </form>
+        </div>
+
         <div class="car__buttons">
         <a class="car__button--rood" href="index.php">&#8592; verder shoppen</a>
           <form method="post" action="index.php?page=car">

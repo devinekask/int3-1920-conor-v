@@ -30,8 +30,7 @@
   --lrBackground: #001826;
   --lrFooter: #000b18;
   /*size*/
-  --lrXSmall: 2rem;
-  --lrSmall: 2.4rem;
+  --lrSmall: 1.8rem;
   --lrMedium: 3rem;
   --lrLarge: 3.6rem;
 }

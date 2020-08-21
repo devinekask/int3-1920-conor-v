@@ -55,6 +55,7 @@
   border: none;
   background-color: var(--blauw);
   color: white;
+  cursor: pointer;
 }
 
 .car__totaal {
@@ -97,6 +98,7 @@
   color: black;
   border: none;
   font-size: var(--grotetekst);
+  cursor: pointer;
 }
 
 .car__button--rood {
