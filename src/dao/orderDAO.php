@@ -5,11 +5,10 @@ require_once( __DIR__ . '/DAO.php');
 class OrderDAO extends DAO {
 
   //SELECT
-  public function selectById($id){
-    $sql = "SELECT * FROM `aankopen`
-    WHERE `aankoop_id` = :id";
+
+  public function selectById(){
+    $sql = "SELECT MAX(aankoop_id) as max FROM `aankopen`";
     $stmt = $this->pdo->prepare($sql);
-    $stmt->bindValue(':id', $id);
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
