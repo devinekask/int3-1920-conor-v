@@ -7,7 +7,7 @@
     <title><?php echo $title; ?></title>
     <?php echo $css;?>
   </head>
-    <?php if ($title == 'longread'){
+    <?php if ($title == 'longread' || $title == 'lrverbrand' || $title == 'lrgeredt'){
       echo $content;
     } else { ?>
     <body>

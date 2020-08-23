@@ -43,6 +43,14 @@ $routes = array(
   'longread' => array(
     'controller' => 'Longread',
     'action' => 'longread'
+  ),
+  'lrverbrand' => array(
+    'controller' => 'Longread',
+    'action' => 'lrverbrand'
+  ),
+  'lrgeredt' => array(
+    'controller' => 'Longread',
+    'action' => 'lrgeredt'
   )
 );
 

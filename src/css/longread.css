@@ -14,6 +14,7 @@
   font-weight: bold;
   flex-flow: column;
   cursor: pointer;
+  margin-left: .6rem;
 
   &:hover {
     transition: 1s;
@@ -49,6 +50,10 @@
   line-height: 1.3;
 }
 
+.LR__intro__title {
+  margin-bottom: 2rem;
+}
+
 .LR__header__link {
   font-size: var(--lrXSmall);
   border: solid var(--lrWhite) .1rem;
@@ -61,12 +66,14 @@
   }
 }
 
-.LR__intro {
+.LR__intro,
+.LR__chapter1 {
   align-items: center;
 }
 
 .LR__intro,
-.LR__chapter1 {
+.LR__chapter1,
+.LR__vuur {
   display: flex;
   flex-flow: column;
 }
@@ -104,6 +111,149 @@
   align-items: center;
 }
 
+.LR__intro__img {
+  cursor: pointer;
+}
+
+.LR__title__chapter1,
+.LR__chapter2__title,
+.LR__vuur__title,
+.LR__humoboeken__title,
+.LR__keuzen__title,
+.LR__keuzen {
+  margin: 5rem 0 2rem;
+}
+
+.LR__chapter1__deel2,
+.LR__chapter2__deel2 {
+  margin: 5rem;
+}
+
+.LR__chapter1 {
+  margin-bottom: 6rem;
+}
+
+.LR__materiaal__model {
+  width: 25rem;
+}
+
+.LR__materiaal__wrapper__foto {
+  width: 10rem;
+  padding-left: 2rem;
+}
+
+.LR__materiaal__wrapper {
+  display: flex;
+  align-items: center;
+  width: 33rem;
+  justify-content: space-between;
+  margin: 3rem 0;
+  padding: 1rem 0;
+  background-color: #003351;
+  height: 10rem;
+}
+
+.LR__materiaal__neemmee__actief,
+.LR__materiaal__neemmee,
+.LR__materiaal__neemmee__check {
+  color: white;
+  font-size: 2rem;
+  display: block;
+}
+
+.LR__materiaal__neemmee__actief {
+  background: #007ac2;
+  padding: 4rem 2.3rem;
+  cursor: pointer;
+}
+
+.LR__materiaal__neemmee__actief:hover {
+  color: #007ac2;
+  background: white;
+}
+
+.LR__materiaal__neemmee__check {
+  background: green;
+  padding: 4rem 2.3rem;
+}
+
+.LR__materiaal__neemmee {
+  border: white solid;
+  padding: 3.6rem 2rem;
+}
+
+.LR__vuur {
+  background-image: url(../assets/longread/vuur.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.LR__vuur__boekenreeks {
+  overflow-y: hidden;
+}
+
+.LR__vuur__list {
+  display: flex;
+  align-items: flex-end;
+  padding-left: 115rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 250rem;
+}
+
+.LR__vuur__list__item {
+  margin-left: 3rem;
+}
+
+.LR__vuur__shop {
+  text-decoration: none;
+  display: block;
+  margin-top: 4rem;
+  font-size: 3rem;
+  border: .5rem white solid;
+  padding: 1rem 4rem;
+  line-height: 1;
+  font-family: var(--lrTitle);
+  font-weight: bold;
+  color: white;
+}
+
+.LR__vuur__shop:hover {
+  color: #007ac2;
+  background-color: white;
+}
+
+.LR__keuzen__wrapper {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.LR__keuzen__link {
+  margin-bottom: 2rem;
+  color: white;
+  font-size: 2rem;
+  display: block;
+  border: .3rem solid white;
+  border-radius: 3rem;
+  padding: 1.5rem;
+  font-family: var(--lrTitle);
+}
+
+.LR__keuzen__link:hover {
+  color: #007ac2;
+  background-color: white;
+}
+
+.LR__keuzen__humo {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  margin: 8rem 0 2rem;
+}
+
 .LR__footer {
   background-color: var(--lrFooter);
   display: flex;
@@ -124,6 +274,20 @@
   font-weight: bold;
 }
 
+.LR__footer__madeby {
+  margin-top: 1rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.LR__footer__madeby__span {
+  color: #e12121;
+}
+
+.LR__footer__madeby__span:hover {
+  color: #007ac2;
+}
+
 .LR__footer__copy {
   color: var(--lrWhite);
   font-size: var(--lrXSmall);
@@ -134,11 +298,13 @@
 
 .LR__weetje1,
 .LR__weetje2 {
-  background: #c4c4c4;
+  background: #1d3a4b;
   z-index: 2;
   position: absolute;
   width: 100vw;
   padding-bottom: 2rem;
+  left: 0;
+  color: white;
 }
 
 .LR__weetje1-X,
@@ -172,6 +338,20 @@
   margin-top: 2rem;
 }
 
+.weetje__klikme {
+  font-size: 2rem;
+  color: white;
+  margin-top: .5rem;
+}
+
+.LR__extra__text {
+  margin: 5rem 0;
+}
+
+.LR__extra__link {
+  margin-bottom: 5rem;
+}
+
 @media only screen and (min-width: 650px) {
 
   .LR__intro--deel2 {
@@ -200,6 +380,30 @@
   .LR__tekst__space {
     margin-bottom: 0;
   }
+
+  .LR__materiaal__wrapper {
+    width: 43rem;
+  }
+
+  .LR__vuur__title {
+    margin-top: 20rem;
+  }
+
+  .LR__chap1__article__text,
+  .LR__chap2__article__text,
+  .LR__vuur__article__text {
+    width: 80%;
+  }
+
+  .LR__vuur__article__text {
+    margin: 0 auto;
+  }
+
+  .LR__humoboeken__tekst {
+    width: 70%;
+    text-align: center;
+    margin-top: 2rem;
+  }
 }
 
 @media only screen and (min-width: 950px) {
@@ -227,5 +431,109 @@
 
   .LR__weetje__foto {
     margin-left: 2rem;
+  }
+
+  .LR__materiaal__container {
+    display: flex;
+    margin-top: 3rem;
+  }
+
+  .LR__materiaal__wrapper {
+    width: 20rem;
+    display: flex;
+    flex-flow: column;
+    margin: 2rem;
+    height: 20rem;
+  }
+
+  .LR__materiaal__wrapper__foto {
+    padding-left: 0;
+  }
+
+  .LR__materiaal__vest {
+    width: 18rem;
+  }
+
+  .LR__materiaal__neemmee__actief,
+  .LR__materiaal__neemmee__check {
+    padding: 1rem 2.3rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .LR__materiaal__neemmee {
+    padding: .8rem 2rem;
+    border-radius: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .LR__vuur__boeken__container {
+    margin-top: 10rem;
+  }
+
+  .LR__vuur__boeken__shop {
+    margin-bottom: 25rem;
+  }
+
+  .LR__title__chapter1 {
+    width: 40rem;
+    margin-top: 12rem;
+  }
+
+  .LR__chapter2__title {
+    width: 24rem;
+  }
+
+  .LR__keuzen__wrapper {
+    flex-flow: row;
+    justify-content: space-between;
+    width: 60rem;
+    margin-top: 2rem;
+  }
+
+  .LR__keuzen__link {
+    width: 29rem;
+  }
+
+  .LR__vuur__list__item__boek {
+    width: 13rem;
+  }
+
+  .LR__extra__text {
+    width: 67%;
+  }
+
+  .LR__vuur__list {
+    align-items: center;
+    flex-flow: wrap;
+    justify-content: center;
+    padding-left: 0;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+
+  .LR__chap1__article__text,
+  .LR__chap2__article__text,
+  .LR__vuur__article__text {
+    width: 60%;
+  }
+
+  .LR__tekst {
+    font-size: 2.4rem;
+  }
+
+  .intro__tekst__wrapper {
+    width: 27rem;
+    margin-right: 12rem;
+  }
+
+  .LR__weetje__tekst {
+    font-size: 2.4rem;
+  }
+
+  .LR__materiaal__model {
+    width: auto;
   }
 }
