@@ -54,6 +54,14 @@
   margin-bottom: 2rem;
 }
 
+.LR__header {
+  position: relative;
+}
+
+.scroll__indicator {
+  display: none;
+}
+
 .LR__header__link {
   font-size: var(--lrXSmall);
   border: solid var(--lrWhite) .1rem;
@@ -509,6 +517,43 @@
     justify-content: center;
     padding-left: 0;
     width: auto;
+  }
+
+  .scroll__indicator {
+    color: black;
+    font-size: 3rem;
+    font-weight: bold;
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    background-color: white;
+    padding: 1rem 1.7rem;
+    border-radius: 4rem;
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+    display: inline;
+  }
+
+  @-webkit-keyframes mover {
+
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes mover {
+
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-10px);
+    }
   }
 }
 

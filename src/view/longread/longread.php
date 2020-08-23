@@ -1,6 +1,7 @@
 <body class="LR__body">
   <header class="LR__header">
     <h1 class="hidden">Longread: Fahrenheit</h1>
+    <p class="scroll__indicator">&darr;</p>
     <img
       srcset="
         ./assets/longread/header/header__160.png   160w,

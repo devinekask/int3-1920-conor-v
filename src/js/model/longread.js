@@ -7,7 +7,6 @@
 
     let count = 1;
 
-
     $button1.addEventListener('click', () => {
       weetje1Maken();
     });
