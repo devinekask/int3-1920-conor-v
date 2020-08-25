@@ -2,6 +2,13 @@
   background-color: var(--lrBackground);
 }
 
+.LR__body__extra {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
 .LR__hotspot {
   background-color: white;
   width: 6rem;
@@ -352,12 +359,27 @@
   margin-top: .5rem;
 }
 
+.LR__extra__container {
+  display: flex;
+  flex-flow: column;
+}
+
+.LR__extra__title {
+  margin-top: 5rem;
+}
+
 .LR__extra__text {
   margin: 5rem 0;
 }
 
 .LR__extra__link {
   margin-bottom: 5rem;
+}
+
+.LR__extra__link,
+.LR__extra__text,
+.LR__extra__title {
+  align-self: center;
 }
 
 @media only screen and (min-width: 650px) {
@@ -554,6 +576,10 @@
     100% {
       transform: translateY(-10px);
     }
+  }
+
+  .LR__extra__wrapper {
+    margin-top: 10rem;
   }
 }
 

@@ -16,6 +16,7 @@
           $verzend = 1.95;
           $total = 0;
           foreach($_SESSION['cart'] as $item):
+
             $itemTotal = $item['product']['prijs'] * $item['quantity'];
             $total += $itemTotal;
         ?>
@@ -37,19 +38,23 @@
         <div class="car__totaal">
           <p class="car__totaal--producten">Order totaal: <?php echo '&euro;' . $total?></p>
           <p class="car__totaal--verzend">Verzend kosten: &euro;1,95</p>
-          <p class="car__totaal--totaal">Totaal: <?php echo '&euro;' . ($total + $verzend) ?></p>
+          <p class="car__totaal--verzend">korting  <?php echo '&euro;' . $_SESSION['korting'] ?></p>
+          <p class="car__totaal--totaal">Totaal: <?php echo '&euro;' . (($total - $_SESSION['korting']) + $verzend) ?></p>
+
         </div>
 
-        <div>
+        <div class="car__button_korting">
           <form method="post" action="index.php?page=car">
-            <input type="hidden" name="betalen" value="<?php echo $total ?>"/>
-            <input type="text" name="" id="">
-            <button type="submit" name="action" value="begin">submit code</button>
+            <input type="hidden" name="korting" value="korting"/>
+            <label class="korting__label" for="korting"> Kortings code
+              <input type="text" name="korting" id="korting">
+            </label>
+            <button class="korting_button" type="submit" name="action" value="korting">add</button>
           </form>
         </div>
 
         <div class="car__buttons">
-        <a class="car__button--rood" href="index.php">&#8592; verder shoppen</a>
+          <a class="car__button--rood" href="index.php">&#8592; verder shoppen</a>
           <form method="post" action="index.php?page=car">
             <input type="hidden" name="betalen" value="<?php echo $total ?>"/>
             <button class="car__betaalbutton" type="submit" name="action" value="begin">betalen&rarr;</button>

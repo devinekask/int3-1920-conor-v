@@ -1,9 +1,9 @@
-<body class="LR__body">
+<body class="LR__body LR__body__extra">
   <main>
     <section class="LR__intro">
       <h2 class="LR__title">The website is weg!</h2>
       <p class="LR__tekst LR__extra__text">De website is helemaal afgebrand en alles boeken zijn weg op één na. We hebben één boek kunnen redden en dat is fahrenheit 451. Nu in de humo shop te vinden.</p>
-      <a href="index.php?page=details&id=3&details_id=4"><img src="./assets/promoboek.png" alt="boek foto"></a>
+      <a href="index.php?page=details&id=3&details_id=4"><img src="./assets/producten/boek2_detail.png" alt="boek foto"></a>
       <a class="LR__vuur__shop LR__extra__link" href="index.php">SHOP</a>
     </section>
   </main>

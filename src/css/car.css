@@ -139,6 +139,30 @@
   margin: 2rem 0;
 }
 
+.car__button_korting {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: end;
+  margin-top: 1rem;
+  font-size: var(--grotetekst);
+  justify-content: center;
+}
+
+.korting__label {
+  display: flex;
+  flex-flow: column;
+  margin-right: 1rem;
+}
+
+.korting_button {
+  background: var(--button);
+  color: white;
+  border: none;
+  padding: .3rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 @media only screen and (min-width: 550px) {
 
   .carleeg__tekst {

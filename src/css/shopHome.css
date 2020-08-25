@@ -198,6 +198,20 @@
   }
 }
 
+label input[type=radio] + span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 2rem;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+label input[type=radio]:checked + span {
+  border-bottom: solid .2rem black;
+}
+
 @media only screen and (min-width: 700px) {
 
   .product__container {
@@ -220,6 +234,10 @@
     padding: 1rem;
     width: initial;
     margin-bottom: 3rem;
+  }
+
+  label input[type=radio] + span {
+    font-size: 2.5rem;
   }
 }
 

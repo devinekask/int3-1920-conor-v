@@ -1,13 +1,13 @@
-<body class="LR__body">
+<body class="LR__body LR__body__extra">
   <main>
-    <section class="LR__intro">
-      <h2 class="LR__title">The boeken zijn geredt!</h2>
+    <section class="LR__extra__container">
+      <h2 class="LR__title LR__extra__title">The boeken zijn geredt!</h2>
       <p class="LR__tekst LR__extra__text">De webiste hebben we niet kunnen redden maar de boeken zijn uit het vuur gehaalt. Nu kan je nog altijd je favoriete scifi humo reeks kopen.</p>
-      <article class="LR__intro LR__vuur__boekenreeks">
+      <article class="LR__intro LR__vuur__boekenreeks LR__extra__wrapper">
         <h3 class="hidden">boeken reeks</h3>
         <div class="LR__vuur__list">
           <div class="LR__vuur__list__item"><a href="index.php?page=details&id=2&details_id=2"><img class="LR__vuur__list__item__boek" src="./assets/producten/boek1.png" alt="boek foto"></a></div>
-          <div class="LR__vuur__list__item"><a href="index.php?page=details&id=3&details_id=4"><img class="LR__vuur__list__item__boek" src="./assets/promoboek.png" alt="boek foto"></a></div>
+          <div class="LR__vuur__list__item"><a href="index.php?page=details&id=3&details_id=4"><img class="LR__vuur__list__item__boek" src="./assets/producten/boek2.png" alt="boek foto"></a></div>
           <div class="LR__vuur__list__item"><a href="index.php?page=details&id=4&details_id=6"><img class="LR__vuur__list__item__boek" src="./assets/producten/boek3.png" alt="boek foto"></a></div>
           <div class="LR__vuur__list__item"><a href="index.php?page=details&id=5&details_id=8"><img class="LR__vuur__list__item__boek" src="./assets/producten/boek4.png" alt="boek foto"></a></div>
           <div class="LR__vuur__list__item"><a href="index.php?page=details&id=6&details_id=10"><img class="LR__vuur__list__item__boek" src="./assets/producten/boek5.png" alt="boek foto"></a></div>

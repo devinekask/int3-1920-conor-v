@@ -35,6 +35,9 @@ class Controller {
     if (!empty($_SESSION['info'])) {
       unset($_SESSION['info']);
     }
+    if (!empty($_SESSION['korting'])) {
+      unset($_SESSION['korting']);
+    }
     if (!empty($_SESSION['error'])) {
       unset($_SESSION['error']);
     }

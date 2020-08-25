@@ -15,6 +15,7 @@ class OrderController extends Controller {
   }
 
   public function car() {
+    $_SESSION['korting'] = 0;
     if (!empty($_POST['action'])) {
       if ($_POST['action'] == 'add') {
         $this->_handleAdd();
@@ -27,6 +28,21 @@ class OrderController extends Controller {
         $_SESSION['info'] = 'Product is toegevoegt aan winkelmand';
         header('Location: index.php?page=details&id='. $_POST['id'] .'&details_id='. $_POST['details_id']);
         exit();
+      }
+
+      if (!empty($_POST['action'] == 'korting')) {
+        if (isset($_SESSION['cart']['4'])){
+          if ($_POST['korting'] == 'herbalife666') {
+            $_SESSION['korting'] = 8;
+            $_SESSION['info'] = 'korting toegevoegt';
+          } else {
+            $_SESSION['korting'] = 0;
+            $_SESSION['error'] = 'code niet geldig';
+          }
+        } else {
+          $_SESSION['korting'] = 0;
+          $_SESSION['error'] = 'code is alleen voor boek van de week';
+        }
       }
 
       if ($_POST['action'] == 'form') {
@@ -62,8 +78,7 @@ class OrderController extends Controller {
         exit();
       }
 
-      header('Location: index.php?page=car');
-      exit();
+
     }
     if (!empty($_POST['remove'])) {
       $this->_handleRemove();
