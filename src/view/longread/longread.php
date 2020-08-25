@@ -25,7 +25,7 @@
       <div>
         <h3 class="LR__title LR__intro__title">Een gesloten boek heeft ook een verhaal</h3>
         <p class="LR__tekst LR__intro__tekst">Dit verhaal volgt een brandweerman genaamd Montag. Montag is een 30+ man die zijn dagen vult met zijn werk.</p>
-        <p class="LR__tekst LR__intro__tekst">Dag in dag uit boeken verbrandt zodat de bevolking niet zot kan worden van deze waanzin bronnen.</p>
+        <p class="LR__tekst LR__intro__tekst">Dag in dag uit <span class="hint">boeken verbrandt</span> zodat de bevolking niet zot kan worden van deze waanzin bronnen.</p>
         <p class="LR__tekst LR__intro__tekst">Montag is gedreven en vastberaden, als hij iets wil gaat hij er voor. Hij heeft het huisje tuintje vrouwtje al inorde.</p>
       </div>
 
@@ -39,7 +39,7 @@
         <p class="LR__tekst LR__intro__tekst2">en geeft een bepaald inzicht in het verhaal.</p>
       </div>
       <div class="LR__intro__quote--wrapper">
-        <q class="LR__tekst LR__intro__quote">"It was a pleasure to burn. It was a special pleasure to see things eaten, to see things blackend and changed"</q>
+        <q class="LR__tekst LR__intro__quote">"It was a pleasure to <span class="hint">burn</span>. It was a special pleasure to see things eaten, to see things blackend and changed"</q>
       </div>
     </article>
   </section>
