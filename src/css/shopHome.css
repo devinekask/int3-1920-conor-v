@@ -198,17 +198,17 @@
   }
 }
 
-label input[type=radio] + span {
+label .radio_cat[type=radio] + span {
   font-size: 1.5rem;
   font-weight: bold;
   margin-right: 2rem;
 }
 
-input[type=radio] {
+.radio_cat[type=radio] {
   display: none;
 }
 
-label input[type=radio]:checked + span {
+label .radio_cat[type=radio]:checked + span {
   border-bottom: solid .2rem black;
 }
 
@@ -236,7 +236,7 @@ label input[type=radio]:checked + span {
     margin-bottom: 3rem;
   }
 
-  label input[type=radio] + span {
+  label .radio_cat[type=radio] + span {
     font-size: 2.5rem;
   }
 }

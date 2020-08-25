@@ -32,7 +32,7 @@ class OrderController extends Controller {
 
       if (!empty($_POST['action'] == 'korting')) {
         if (isset($_SESSION['cart']['4'])){
-          if ($_POST['korting'] == 'herbalife666') {
+          if ($_POST['korting'] == 'humocode') {
             $_SESSION['korting'] = 8;
             $_SESSION['info'] = 'korting toegevoegt';
           } else {
@@ -41,7 +41,7 @@ class OrderController extends Controller {
           }
         } else {
           $_SESSION['korting'] = 0;
-          $_SESSION['error'] = 'code is alleen voor boek van de week';
+          $_SESSION['error'] = 'kortings code is alleen voor boek van de week';
         }
       }
 

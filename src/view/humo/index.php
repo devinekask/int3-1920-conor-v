@@ -33,13 +33,13 @@
     <input type="hidden" name="action" value="filter"/>
 
     <label for="alles">
-      <input class="radio" type="radio" id="alles" name="cat" value="alles" checked <?php if (isset($_GET['cat'])) {if ($_GET['cat'] == 'alles') {echo ' checked';}}?>>
+      <input class="radio radio_cat" type="radio" id="alles" name="cat" value="alles" checked <?php if (isset($_GET['cat'])) {if ($_GET['cat'] == 'alles') {echo ' checked';}}?>>
       <span class="form__toggle__button">Alles</span>
     </label>
 
     <?php foreach($categories as $categorie): ?>
       <label for="<?php echo $categorie['category'];?>">
-        <input class="radio" type="radio" id="<?php echo $categorie['category'];?>" name="cat" value="<?php echo $categorie['category'];?>"
+        <input class="radio radio_cat" type="radio" id="<?php echo $categorie['category'];?>" name="cat" value="<?php echo $categorie['category'];?>"
           <?php if (isset($_GET['cat'])) {
             if ($_GET['cat'] == $categorie['category']) {
               echo ' checked';}}?>>
